@@ -1,0 +1,12 @@
+C:\silena_dangond\backEnd\stage2BE\nuevaMetodologia\RecruitmentManager.Entities\bin\Debug\net5.0\RecruitmentManager.Entities.deps.json
+C:\silena_dangond\backEnd\stage2BE\nuevaMetodologia\RecruitmentManager.Entities\bin\Debug\net5.0\RecruitmentManager.Entities.dll
+C:\silena_dangond\backEnd\stage2BE\nuevaMetodologia\RecruitmentManager.Entities\bin\Debug\net5.0\RecruitmentManager.Entities.pdb
+C:\silena_dangond\backEnd\stage2BE\nuevaMetodologia\RecruitmentManager.Entities\obj\Debug\net5.0\RecruitmentManager.Entities.csproj.AssemblyReference.cache
+C:\silena_dangond\backEnd\stage2BE\nuevaMetodologia\RecruitmentManager.Entities\obj\Debug\net5.0\RecruitmentManager.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\silena_dangond\backEnd\stage2BE\nuevaMetodologia\RecruitmentManager.Entities\obj\Debug\net5.0\RecruitmentManager.Entities.AssemblyInfoInputs.cache
+C:\silena_dangond\backEnd\stage2BE\nuevaMetodologia\RecruitmentManager.Entities\obj\Debug\net5.0\RecruitmentManager.Entities.AssemblyInfo.cs
+C:\silena_dangond\backEnd\stage2BE\nuevaMetodologia\RecruitmentManager.Entities\obj\Debug\net5.0\RecruitmentManager.Entities.csproj.CoreCompileInputs.cache
+C:\silena_dangond\backEnd\stage2BE\nuevaMetodologia\RecruitmentManager.Entities\obj\Debug\net5.0\RecruitmentManager.Entities.dll
+C:\silena_dangond\backEnd\stage2BE\nuevaMetodologia\RecruitmentManager.Entities\obj\Debug\net5.0\refint\RecruitmentManager.Entities.dll
+C:\silena_dangond\backEnd\stage2BE\nuevaMetodologia\RecruitmentManager.Entities\obj\Debug\net5.0\RecruitmentManager.Entities.pdb
+C:\silena_dangond\backEnd\stage2BE\nuevaMetodologia\RecruitmentManager.Entities\obj\Debug\net5.0\ref\RecruitmentManager.Entities.dll
