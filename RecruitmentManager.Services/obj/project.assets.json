@@ -1665,7 +1665,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "RecruitmentManager.DataAccess": "1.0.0"
+          "RecruitmentManager.DataAccess": "1.0.0",
+          "RecruitmentManager.Entities": "1.0.0"
         },
         "compile": {
           "bin/placeholder/RecruitmentManager.Core.dll": {}

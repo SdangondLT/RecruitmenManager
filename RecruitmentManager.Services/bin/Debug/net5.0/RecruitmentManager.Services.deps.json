@@ -1449,7 +1449,8 @@
       },
       "RecruitmentManager.Core/1.0.0": {
         "dependencies": {
-          "RecruitmentManager.DataAccess": "1.0.0"
+          "RecruitmentManager.DataAccess": "1.0.0",
+          "RecruitmentManager.Entities": "1.0.0"
         },
         "runtime": {
           "RecruitmentManager.Core.dll": {}

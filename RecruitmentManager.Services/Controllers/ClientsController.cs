@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RecruitmentManager.Core.Core.V1;
+using RecruitmentManager.Entities.DTOs;
 using RecruitmentManager.Entities.Entities;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -35,18 +36,20 @@ namespace RecruitmentManager.Services.Controllers
 
         // POST api/<ClientController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<Client> Post([FromBody] ClientCreateDto client)
         {
+            return await _clientCore.CreateClientAsync(client);
         }
 
         // PUT api/<ClientController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [HttpPut]
+        public async Task<bool> Put([FromBody] Client client)
         {
+            return await _clientCore.UpdateClientAsync(client);
         }
 
         // DELETE api/<ClientController>/5
-        [HttpDelete("{id}")]
+        [HttpDelete]
         public void Delete(int id)
         {
         }

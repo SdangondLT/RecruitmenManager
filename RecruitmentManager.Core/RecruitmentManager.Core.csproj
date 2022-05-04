@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\RecruitmentManager.DataAccess\RecruitmentManager.DataAccess.csproj" />
+    <ProjectReference Include="..\RecruitmentManager.Entities\RecruitmentManager.Entities.csproj" />
   </ItemGroup>
 
 </Project>

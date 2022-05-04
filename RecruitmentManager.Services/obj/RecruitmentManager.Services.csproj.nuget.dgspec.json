@@ -34,6 +34,9 @@
             "projectReferences": {
               "C:\\silena_dangond\\backEnd\\stage2BE\\nuevaMetodologia\\RecruitmentManager.DataAccess\\RecruitmentManager.DataAccess.csproj": {
                 "projectPath": "C:\\silena_dangond\\backEnd\\stage2BE\\nuevaMetodologia\\RecruitmentManager.DataAccess\\RecruitmentManager.DataAccess.csproj"
+              },
+              "C:\\silena_dangond\\backEnd\\stage2BE\\nuevaMetodologia\\RecruitmentManager.Entities\\RecruitmentManager.Entities.csproj": {
+                "projectPath": "C:\\silena_dangond\\backEnd\\stage2BE\\nuevaMetodologia\\RecruitmentManager.Entities\\RecruitmentManager.Entities.csproj"
               }
             }
           }

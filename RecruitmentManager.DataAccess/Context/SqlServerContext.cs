@@ -11,6 +11,7 @@ namespace RecruitmentManager.DataAccess.Context
     public class SqlServerContext: DbContext
     {
         private readonly string _connectionString = string.Empty;
+        public DbSet<Client> Client { get; set; }
 
         public SqlServerContext()
         {
@@ -41,6 +42,6 @@ namespace RecruitmentManager.DataAccess.Context
 
         }
 
-        public DbSet<Client> Client { get; set; }
+        
     }
 }
