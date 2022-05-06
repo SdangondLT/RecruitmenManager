@@ -39,6 +39,7 @@ namespace RecruitmentManager.Core.Core.V1
             return newClientCreated.Entity;
         }
 
+        //test git
         public async Task<bool> UpdateClientAsync(Client clientToUpdated)
         {
             Client client = _context.Client.Find(clientToUpdated.IdClient);

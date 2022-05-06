@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nhEPdPbl2js0C1Faw1JhaGIf+VVzYoJBfgHlqkMU6/c1D48fj8lxyrXTRlr1/3SMm0LUW7bVu5UQNZyAVJEPiQ==",
+  "dgSpecHash": "zTL+zGJm/Lyn8aPDpO9zD2DhGu/Latw9skXOID8M5Jb+ANlGk6sqAA3tlg40m4MIEID5134pNyoVzAakTfnuAQ==",
   "success": true,
-  "projectFilePath": "C:\\silena_dangond\\backEnd\\stage2BE\\nuevaMetodologia\\RecruitmentManager.Contracts\\RecruitmentManager.Contracts.csproj",
+  "projectFilePath": "D:\\JDB\\Back\\Stage2\\Test\\RecruitmentManager.Contracts\\RecruitmentManager.Contracts.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

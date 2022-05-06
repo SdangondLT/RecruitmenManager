@@ -6071,24 +6071,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\SILENA DANGOND\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\DAYHANARAMIREZMORENO\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\silena_dangond\\backEnd\\stage2BE\\nuevaMetodologia\\RecruitmentManager.Core\\RecruitmentManager.Core.csproj",
+      "projectUniqueName": "D:\\JDB\\Back\\Stage2\\Test\\RecruitmentManager.Core\\RecruitmentManager.Core.csproj",
       "projectName": "RecruitmentManager.Core",
-      "projectPath": "C:\\silena_dangond\\backEnd\\stage2BE\\nuevaMetodologia\\RecruitmentManager.Core\\RecruitmentManager.Core.csproj",
-      "packagesPath": "C:\\Users\\SILENA DANGOND\\.nuget\\packages\\",
-      "outputPath": "C:\\silena_dangond\\backEnd\\stage2BE\\nuevaMetodologia\\RecruitmentManager.Core\\obj\\",
+      "projectPath": "D:\\JDB\\Back\\Stage2\\Test\\RecruitmentManager.Core\\RecruitmentManager.Core.csproj",
+      "packagesPath": "C:\\Users\\DAYHANARAMIREZMORENO\\.nuget\\packages\\",
+      "outputPath": "D:\\JDB\\Back\\Stage2\\Test\\RecruitmentManager.Core\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\SILENA DANGOND\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\DAYHANARAMIREZMORENO\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6102,11 +6097,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\silena_dangond\\backEnd\\stage2BE\\nuevaMetodologia\\RecruitmentManager.DataAccess\\RecruitmentManager.DataAccess.csproj": {
-              "projectPath": "C:\\silena_dangond\\backEnd\\stage2BE\\nuevaMetodologia\\RecruitmentManager.DataAccess\\RecruitmentManager.DataAccess.csproj"
+            "D:\\JDB\\Back\\Stage2\\Test\\RecruitmentManager.DataAccess\\RecruitmentManager.DataAccess.csproj": {
+              "projectPath": "D:\\JDB\\Back\\Stage2\\Test\\RecruitmentManager.DataAccess\\RecruitmentManager.DataAccess.csproj"
             },
-            "C:\\silena_dangond\\backEnd\\stage2BE\\nuevaMetodologia\\RecruitmentManager.Entities\\RecruitmentManager.Entities.csproj": {
-              "projectPath": "C:\\silena_dangond\\backEnd\\stage2BE\\nuevaMetodologia\\RecruitmentManager.Entities\\RecruitmentManager.Entities.csproj"
+            "D:\\JDB\\Back\\Stage2\\Test\\RecruitmentManager.Entities\\RecruitmentManager.Entities.csproj": {
+              "projectPath": "D:\\JDB\\Back\\Stage2\\Test\\RecruitmentManager.Entities\\RecruitmentManager.Entities.csproj"
             }
           }
         }
@@ -6135,7 +6130,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
