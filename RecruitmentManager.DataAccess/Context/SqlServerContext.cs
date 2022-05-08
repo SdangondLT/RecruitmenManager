@@ -16,7 +16,7 @@ namespace RecruitmentManager.DataAccess.Context
         public SqlServerContext()
         {
             //un strin de connection es la ruta ala DB
-            _connectionString = @"Data Source = DESKTOP-IF9J0OU\SQLEXPRESS; Initial Catalog = RecruitmentManager; Integrated Security = true; User Id=sa; Password=";
+            _connectionString = @"Data Source = LTUSPE-L0004\SQLEXPRESS; Initial Catalog = RecruitmentManager; Integrated Security = true;";
 
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
