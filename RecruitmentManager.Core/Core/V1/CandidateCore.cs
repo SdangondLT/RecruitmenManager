@@ -65,6 +65,7 @@ namespace RecruitmentManager.Core.Core.V1
         public async Task<bool> DeleteCandidateAsync(Candidate candidateToDelete)
         {
             Candidate candidate = _context.Candidate.Find(candidateToDelete.IdCandidate);
+            
             candidate.Name = candidateToDelete.Name;
             candidate.CV = candidateToDelete.CV;
             candidate.CandidateType = candidateToDelete.CandidateType;
