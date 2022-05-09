@@ -3,10 +3,8 @@ using Microsoft.EntityFrameworkCore;
 using RecruitmentManager.DataAccess.Context;
 using RecruitmentManager.Entities.DTOs;
 using RecruitmentManager.Entities.Entities;
-using System;
+
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace RecruitmentManager.Core.Core.V1
@@ -48,9 +46,9 @@ namespace RecruitmentManager.Core.Core.V1
 
             _context.Client.Update(client);           
 
-            int recordsAffeted = await _context.SaveChangesAsync();
+            int recordsAffected = await _context.SaveChangesAsync();
 
-            return (recordsAffeted == 1);
+            return (recordsAffected == 1);
         }
 
     }
