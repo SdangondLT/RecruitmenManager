@@ -1,24 +1,26 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RecruitmentManager.Entities.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RecruitmentManager.DataAccess.Context
 {
-    public class SqlServerContext: DbContext
+    public class SqlServerContext : DbContext
     {
         private readonly string _connectionString = string.Empty;
+
         public DbSet<Client> Client { get; set; }
+
+        public DbSet<HardSkill> HardSkill { get; set; }
+
+        public DbSet<SoftSkill> SoftSkill { get; set; }
+
+        public DbSet<Interviewer> Interviewer { get; set; }
 
         public SqlServerContext()
         {
             //un strin de connection es la ruta ala DB
-            _connectionString = @"Data Source = DESKTOP-IF9J0OU\SQLEXPRESS; Initial Catalog = RecruitmentManager; Integrated Security = true; User Id=sa; Password=";
-
+            _connectionString = "Data Source = DRM; Initial Catalog = RecruitmentManager; Integrated Security = true";
         }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //servidor
@@ -31,8 +33,17 @@ namespace RecruitmentManager.DataAccess.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {//algunas conf de nuestras entidades
-            modelBuilder.Entity<Client>().HasKey(c => new {c.IdClient} );
+            modelBuilder.Entity<Client>().HasKey(c => new { c.IdClient });
             modelBuilder.Entity<Client>().Property(c => c.IdClient).UseIdentityColumn().Metadata.SetBeforeSaveBehavior(Microsoft.EntityFrameworkCore.Metadata.PropertySaveBehavior.Ignore);
+
+            modelBuilder.Entity<HardSkill>().HasKey(s => new { s.IdHardSkill });
+            modelBuilder.Entity<HardSkill>().Property(s => s.IdHardSkill).UseIdentityColumn().Metadata.SetBeforeSaveBehavior(Microsoft.EntityFrameworkCore.Metadata.PropertySaveBehavior.Ignore);
+
+            modelBuilder.Entity<SoftSkill>().HasKey(s => new { s.IdSoftSkill });
+            modelBuilder.Entity<SoftSkill>().Property(s => s.IdSoftSkill).UseIdentityColumn().Metadata.SetBeforeSaveBehavior(Microsoft.EntityFrameworkCore.Metadata.PropertySaveBehavior.Ignore);
+
+            modelBuilder.Entity<Interviewer>().HasKey(i => new { i.IdInterviewer });
+            modelBuilder.Entity<Interviewer>().Property(i => i.IdInterviewer).UseIdentityColumn().Metadata.SetBeforeSaveBehavior(Microsoft.EntityFrameworkCore.Metadata.PropertySaveBehavior.Ignore);
 
             //modelBuilder.Entity<Client>()
             //    .HasOne(c => c.Client)
@@ -42,6 +53,6 @@ namespace RecruitmentManager.DataAccess.Context
 
         }
 
-        
+
     }
 }

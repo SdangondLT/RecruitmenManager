@@ -10,3 +10,15 @@ C:\silena_dangond\backEnd\stage2BE\nuevaMetodologia\RecruitmentManager.Entities\
 C:\silena_dangond\backEnd\stage2BE\nuevaMetodologia\RecruitmentManager.Entities\obj\Debug\net5.0\refint\RecruitmentManager.Entities.dll
 C:\silena_dangond\backEnd\stage2BE\nuevaMetodologia\RecruitmentManager.Entities\obj\Debug\net5.0\RecruitmentManager.Entities.pdb
 C:\silena_dangond\backEnd\stage2BE\nuevaMetodologia\RecruitmentManager.Entities\obj\Debug\net5.0\ref\RecruitmentManager.Entities.dll
+D:\JDB\Back\Stage2\Test\RecruitmentManager.Entities\bin\Debug\net5.0\RecruitmentManager.Entities.deps.json
+D:\JDB\Back\Stage2\Test\RecruitmentManager.Entities\bin\Debug\net5.0\RecruitmentManager.Entities.dll
+D:\JDB\Back\Stage2\Test\RecruitmentManager.Entities\bin\Debug\net5.0\RecruitmentManager.Entities.pdb
+D:\JDB\Back\Stage2\Test\RecruitmentManager.Entities\obj\Debug\net5.0\RecruitmentManager.Entities.csproj.AssemblyReference.cache
+D:\JDB\Back\Stage2\Test\RecruitmentManager.Entities\obj\Debug\net5.0\RecruitmentManager.Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\JDB\Back\Stage2\Test\RecruitmentManager.Entities\obj\Debug\net5.0\RecruitmentManager.Entities.AssemblyInfoInputs.cache
+D:\JDB\Back\Stage2\Test\RecruitmentManager.Entities\obj\Debug\net5.0\RecruitmentManager.Entities.AssemblyInfo.cs
+D:\JDB\Back\Stage2\Test\RecruitmentManager.Entities\obj\Debug\net5.0\RecruitmentManager.Entities.csproj.CoreCompileInputs.cache
+D:\JDB\Back\Stage2\Test\RecruitmentManager.Entities\obj\Debug\net5.0\RecruitmentManager.Entities.dll
+D:\JDB\Back\Stage2\Test\RecruitmentManager.Entities\obj\Debug\net5.0\refint\RecruitmentManager.Entities.dll
+D:\JDB\Back\Stage2\Test\RecruitmentManager.Entities\obj\Debug\net5.0\RecruitmentManager.Entities.pdb
+D:\JDB\Back\Stage2\Test\RecruitmentManager.Entities\obj\Debug\net5.0\ref\RecruitmentManager.Entities.dll
