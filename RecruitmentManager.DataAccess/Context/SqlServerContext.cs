@@ -12,6 +12,7 @@ namespace RecruitmentManager.DataAccess.Context
     {
         private readonly string _connectionString = string.Empty;
         public DbSet<Client> Client { get; set; }
+        public DbSet<Candidate> Candidate { get; set; }
 
         public SqlServerContext()
         {
@@ -33,6 +34,8 @@ namespace RecruitmentManager.DataAccess.Context
         {//algunas conf de nuestras entidades
             modelBuilder.Entity<Client>().HasKey(c => new {c.IdClient} );
             modelBuilder.Entity<Client>().Property(c => c.IdClient).UseIdentityColumn().Metadata.SetBeforeSaveBehavior(Microsoft.EntityFrameworkCore.Metadata.PropertySaveBehavior.Ignore);
+            modelBuilder.Entity<Candidate>().HasKey(c => new { c.IdCandidate });
+            modelBuilder.Entity<Candidate>().Property(c => c.IdCandidate).UseIdentityColumn().Metadata.SetBeforeSaveBehavior(Microsoft.EntityFrameworkCore.Metadata.PropertySaveBehavior.Ignore);
 
             //modelBuilder.Entity<Client>()
             //    .HasOne(c => c.Client)
@@ -41,6 +44,7 @@ namespace RecruitmentManager.DataAccess.Context
             base.OnModelCreating(modelBuilder);
 
         }
+
 
         
     }
