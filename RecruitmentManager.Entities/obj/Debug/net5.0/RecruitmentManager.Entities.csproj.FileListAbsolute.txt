@@ -10,3 +10,15 @@ C:\silena_dangond\backEnd\stage2BE\nuevaMetodologia\RecruitmentManager.Entities\
 C:\silena_dangond\backEnd\stage2BE\nuevaMetodologia\RecruitmentManager.Entities\obj\Debug\net5.0\refint\RecruitmentManager.Entities.dll
 C:\silena_dangond\backEnd\stage2BE\nuevaMetodologia\RecruitmentManager.Entities\obj\Debug\net5.0\RecruitmentManager.Entities.pdb
 C:\silena_dangond\backEnd\stage2BE\nuevaMetodologia\RecruitmentManager.Entities\obj\Debug\net5.0\ref\RecruitmentManager.Entities.dll
+C:\Users\MARIANA GALLEGO\Desktop\Back-end\Proyecto - Recruitment manager\proyecto-base\RecruitmentManager.Entities\bin\Debug\net5.0\RecruitmentManager.Entities.deps.json
+C:\Users\MARIANA GALLEGO\Desktop\Back-end\Proyecto - Recruitment manager\proyecto-base\RecruitmentManager.Entities\bin\Debug\net5.0\RecruitmentManager.Entities.dll
+C:\Users\MARIANA GALLEGO\Desktop\Back-end\Proyecto - Recruitment manager\proyecto-base\RecruitmentManager.Entities\bin\Debug\net5.0\RecruitmentManager.Entities.pdb
+C:\Users\MARIANA GALLEGO\Desktop\Back-end\Proyecto - Recruitment manager\proyecto-base\RecruitmentManager.Entities\obj\Debug\net5.0\RecruitmentManager.Entities.csproj.AssemblyReference.cache
+C:\Users\MARIANA GALLEGO\Desktop\Back-end\Proyecto - Recruitment manager\proyecto-base\RecruitmentManager.Entities\obj\Debug\net5.0\RecruitmentManager.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MARIANA GALLEGO\Desktop\Back-end\Proyecto - Recruitment manager\proyecto-base\RecruitmentManager.Entities\obj\Debug\net5.0\RecruitmentManager.Entities.AssemblyInfoInputs.cache
+C:\Users\MARIANA GALLEGO\Desktop\Back-end\Proyecto - Recruitment manager\proyecto-base\RecruitmentManager.Entities\obj\Debug\net5.0\RecruitmentManager.Entities.AssemblyInfo.cs
+C:\Users\MARIANA GALLEGO\Desktop\Back-end\Proyecto - Recruitment manager\proyecto-base\RecruitmentManager.Entities\obj\Debug\net5.0\RecruitmentManager.Entities.csproj.CoreCompileInputs.cache
+C:\Users\MARIANA GALLEGO\Desktop\Back-end\Proyecto - Recruitment manager\proyecto-base\RecruitmentManager.Entities\obj\Debug\net5.0\RecruitmentManager.Entities.dll
+C:\Users\MARIANA GALLEGO\Desktop\Back-end\Proyecto - Recruitment manager\proyecto-base\RecruitmentManager.Entities\obj\Debug\net5.0\refint\RecruitmentManager.Entities.dll
+C:\Users\MARIANA GALLEGO\Desktop\Back-end\Proyecto - Recruitment manager\proyecto-base\RecruitmentManager.Entities\obj\Debug\net5.0\RecruitmentManager.Entities.pdb
+C:\Users\MARIANA GALLEGO\Desktop\Back-end\Proyecto - Recruitment manager\proyecto-base\RecruitmentManager.Entities\obj\Debug\net5.0\ref\RecruitmentManager.Entities.dll
