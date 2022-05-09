@@ -62,17 +62,11 @@ namespace RecruitmentManager.Core.Core.V1
             return (recordsAffeted == 1);
         }
 
-        public async Task<bool> DeleteCandidateAsync(Candidate candidateToDelete)
+        public async Task<bool> DeleteCandidateAsync(int idCandidateToDelete)
         {
-            Candidate candidate = _context.Candidate.Find(candidateToDelete.IdCandidate);
+            Candidate candidate = _context.Candidate.Find(idCandidateToDelete);
             
-            candidate.Name = candidateToDelete.Name;
-            candidate.CV = candidateToDelete.CV;
-            candidate.CandidateType = candidateToDelete.CandidateType;
-            candidate.HardSkills = candidateToDelete.HardSkills;
-            candidate.SoftSkills = candidateToDelete.SoftSkills;
-            candidate.Seniority = candidateToDelete.Seniority;
-            candidate.YearsOfExperience = candidateToDelete.YearsOfExperience;
+            
 
 
             _context.Candidate.Remove(candidate);
