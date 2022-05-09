@@ -42,10 +42,10 @@ namespace RecruitmentManager.Services.Controllers
         }
 
         // PUT api/<FinalReportsController>/5
-        [HttpPut]
-        public async Task<bool> Put([FromBody] FinalReport finalReport)
+        [HttpPut("{id}")]
+        public async Task<bool> Put(int id,[FromBody] FinalReportUpdateDto finalReport)
         {
-            return await _finalReportCore.UpdateFinalReportAsync(finalReport);
+            return await _finalReportCore.UpdateFinalReportAsync(id,finalReport);
         }
 
         // DELETE api/<FinalReportsController>/5

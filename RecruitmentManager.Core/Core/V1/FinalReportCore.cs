@@ -45,9 +45,9 @@ namespace RecruitmentManager.Core.Core.V1
             return newReportCreated.Entity;
         }
 
-        public async Task<bool> UpdateFinalReportAsync(FinalReport reportToUpdate)
+        public async Task<bool> UpdateFinalReportAsync(int id,FinalReportUpdateDto reportToUpdate)
         {
-            FinalReport report = _context.FinalReport.Find(reportToUpdate.IdReport);
+            FinalReport report = _context.FinalReport.Find(id);
             
             report.Seniority=reportToUpdate.Seniority;
             report.EnglishLevel = reportToUpdate.EnglishLevel;
