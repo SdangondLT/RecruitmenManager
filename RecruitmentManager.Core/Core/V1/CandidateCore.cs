@@ -42,5 +42,43 @@ namespace RecruitmentManager.Core.Core.V1
 
             return newCandidateCreated.Entity;
         }
+
+        public async Task<bool> UpdateCandidateAsync(Candidate candidateToUpdated)
+        {
+            Candidate candidate = _context.Candidate.Find(candidateToUpdated.IdCandidate);
+            candidate.Name = candidateToUpdated.Name;
+            candidate.CV = candidateToUpdated.CV;   
+            candidate.CandidateType = candidateToUpdated.CandidateType;
+            candidate.HardSkills = candidateToUpdated.HardSkills;   
+            candidate.SoftSkills = candidateToUpdated.SoftSkills;
+            candidate.Seniority=candidateToUpdated.Seniority;
+            candidate.YearsOfExperience= candidateToUpdated.YearsOfExperience;
+            
+
+            _context.Candidate.Update(candidate);
+
+            int recordsAffeted = await _context.SaveChangesAsync();
+
+            return (recordsAffeted == 1);
+        }
+
+        public async Task<bool> DeleteCandidateAsync(Candidate candidateToDelete)
+        {
+            Candidate candidate = _context.Candidate.Find(candidateToDelete.IdCandidate);
+            candidate.Name = candidateToDelete.Name;
+            candidate.CV = candidateToDelete.CV;
+            candidate.CandidateType = candidateToDelete.CandidateType;
+            candidate.HardSkills = candidateToDelete.HardSkills;
+            candidate.SoftSkills = candidateToDelete.SoftSkills;
+            candidate.Seniority = candidateToDelete.Seniority;
+            candidate.YearsOfExperience = candidateToDelete.YearsOfExperience;
+
+
+            _context.Candidate.Remove(candidate);
+
+            int recordsAffeted = await _context.SaveChangesAsync();
+
+            return (recordsAffeted == 1);
+        }
     }
 }

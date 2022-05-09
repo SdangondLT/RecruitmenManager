@@ -42,15 +42,17 @@ namespace RecruitmentManager.Services.Controllers
         }
 
         // PUT api/<CandidatesController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [HttpPut]
+        public async Task<bool> Put([FromBody] Candidate candidate)
         {
+            return await _candidateCore.UpdateCandidateAsync(candidate);
         }
 
         // DELETE api/<CandidatesController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpDelete]
+        public async Task<bool> Delete([FromBody] Candidate candidate)
         {
+            return await _candidateCore.DeleteCandidateAsync(candidate);
         }
     }
 }
