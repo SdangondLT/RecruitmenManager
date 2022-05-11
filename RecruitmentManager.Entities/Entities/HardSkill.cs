@@ -6,5 +6,6 @@ namespace RecruitmentManager.Entities.Entities
     {
         [Key]
         public int IdHardSkill { get; set; }
+        public string Description { get; set; }
     }
 }
