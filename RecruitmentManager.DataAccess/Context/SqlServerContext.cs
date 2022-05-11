@@ -38,6 +38,12 @@ namespace RecruitmentManager.DataAccess.Context
             //    .HasOne(c => c.Client)
             //    .WithMany(c => c.Vacancy)
             //    .HasForeignKey(c => c.IdClient);
+
+            modelBuilder.Entity<HardSkill>().HasKey(v => new { v.IdHardSkill });
+            modelBuilder.Entity<HardSkill>().Property(v => v.IdHardSkill).UseIdentityColumn().Metadata.SetBeforeSaveBehavior(Microsoft.EntityFrameworkCore.Metadata.PropertySaveBehavior.Ignore);
+
+            modelBuilder.Entity<SoftSkill>().HasKey(v => new { v.IdSoftSkill });
+            modelBuilder.Entity<SoftSkill>().Property(v => v.IdSoftSkill).UseIdentityColumn().Metadata.SetBeforeSaveBehavior(Microsoft.EntityFrameworkCore.Metadata.PropertySaveBehavior.Ignore);
             base.OnModelCreating(modelBuilder);
 
         }
