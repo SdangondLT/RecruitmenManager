@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\JHONNY AVENDANO\\Source\\Repos\\RecruitmenManager\\RecruitmentManager.Contracts\\RecruitmentManager.Contracts.csproj": {}
+    "C:\\Users\\SANTIAGO SUAREZ\\Desktop\\Bootcamp\\Back\\stage2Test\\RecruitmenManager\\RecruitmentManager.Contracts\\RecruitmentManager.Contracts.csproj": {}
   },
   "projects": {
-    "C:\\Users\\JHONNY AVENDANO\\Source\\Repos\\RecruitmenManager\\RecruitmentManager.Contracts\\RecruitmentManager.Contracts.csproj": {
+    "C:\\Users\\SANTIAGO SUAREZ\\Desktop\\Bootcamp\\Back\\stage2Test\\RecruitmenManager\\RecruitmentManager.Contracts\\RecruitmentManager.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JHONNY AVENDANO\\Source\\Repos\\RecruitmenManager\\RecruitmentManager.Contracts\\RecruitmentManager.Contracts.csproj",
+        "projectUniqueName": "C:\\Users\\SANTIAGO SUAREZ\\Desktop\\Bootcamp\\Back\\stage2Test\\RecruitmenManager\\RecruitmentManager.Contracts\\RecruitmentManager.Contracts.csproj",
         "projectName": "RecruitmentManager.Contracts",
-        "projectPath": "C:\\Users\\JHONNY AVENDANO\\Source\\Repos\\RecruitmenManager\\RecruitmentManager.Contracts\\RecruitmentManager.Contracts.csproj",
-        "packagesPath": "C:\\Users\\JHONNY AVENDANO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JHONNY AVENDANO\\Source\\Repos\\RecruitmenManager\\RecruitmentManager.Contracts\\obj\\",
+        "projectPath": "C:\\Users\\SANTIAGO SUAREZ\\Desktop\\Bootcamp\\Back\\stage2Test\\RecruitmenManager\\RecruitmentManager.Contracts\\RecruitmentManager.Contracts.csproj",
+        "packagesPath": "C:\\Users\\SANTIAGO SUAREZ\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SANTIAGO SUAREZ\\Desktop\\Bootcamp\\Back\\stage2Test\\RecruitmenManager\\RecruitmentManager.Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\JHONNY AVENDANO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\SANTIAGO SUAREZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
