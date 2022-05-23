@@ -6271,24 +6271,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DOLCEY MENDOZA\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\DAYHANARAMIREZMORENO\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DOLCEY MENDOZA\\Source\\Repos\\RecruitmenManager\\RecruitmentManager.Services\\RecruitmentManager.Services.csproj",
+      "projectUniqueName": "D:\\JDB\\Back\\Stage2\\Test\\RecruitmentManager.Services\\RecruitmentManager.Services.csproj",
       "projectName": "RecruitmentManager.Services",
-      "projectPath": "C:\\Users\\DOLCEY MENDOZA\\Source\\Repos\\RecruitmenManager\\RecruitmentManager.Services\\RecruitmentManager.Services.csproj",
-      "packagesPath": "C:\\Users\\DOLCEY MENDOZA\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DOLCEY MENDOZA\\Source\\Repos\\RecruitmenManager\\RecruitmentManager.Services\\obj\\",
+      "projectPath": "D:\\JDB\\Back\\Stage2\\Test\\RecruitmentManager.Services\\RecruitmentManager.Services.csproj",
+      "packagesPath": "C:\\Users\\DAYHANARAMIREZMORENO\\.nuget\\packages\\",
+      "outputPath": "D:\\JDB\\Back\\Stage2\\Test\\RecruitmentManager.Services\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\DOLCEY MENDOZA\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\DAYHANARAMIREZMORENO\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6302,8 +6297,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\DOLCEY MENDOZA\\Source\\Repos\\RecruitmenManager\\RecruitmentManager.Core\\RecruitmentManager.Core.csproj": {
-              "projectPath": "C:\\Users\\DOLCEY MENDOZA\\Source\\Repos\\RecruitmenManager\\RecruitmentManager.Core\\RecruitmentManager.Core.csproj"
+            "D:\\JDB\\Back\\Stage2\\Test\\RecruitmentManager.Core\\RecruitmentManager.Core.csproj": {
+              "projectPath": "D:\\JDB\\Back\\Stage2\\Test\\RecruitmentManager.Core\\RecruitmentManager.Core.csproj"
             }
           }
         }
@@ -6341,7 +6336,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

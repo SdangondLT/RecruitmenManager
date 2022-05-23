@@ -27,13 +27,6 @@ namespace RecruitmentManager.Services.Controllers
             return await _clientCore.GetClientsAsync();
         }
 
-        // GET api/<ClientController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
         // POST api/<ClientController>
         [HttpPost]
         public async Task<Client> Post([FromBody] ClientCreateDto client)
@@ -50,8 +43,9 @@ namespace RecruitmentManager.Services.Controllers
 
         // DELETE api/<ClientController>/5
         [HttpDelete]
-        public void Delete(int id)
+        public async Task<bool> Delete(int id)
         {
+            return await _clientCore.DeleteClientAsync(id);
         }
     }
 }
