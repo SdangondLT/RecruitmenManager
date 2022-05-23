@@ -12,11 +12,12 @@ namespace RecruitmentManager.DataAccess.Context
     {
         private readonly string _connectionString = string.Empty;
         public DbSet<Client> Client { get; set; }
+        public DbSet<FinalReport> FinalReport { get; set; }
 
         public SqlServerContext()
         {
             //un strin de connection es la ruta ala DB
-            _connectionString = @"Data Source = DESKTOP-IF9J0OU\SQLEXPRESS; Initial Catalog = RecruitmentManager; Integrated Security = true; User Id=sa; Password=";
+            _connectionString = @"Data Source = DESKTOP-R4U1A54\SQLEXPRESS; Initial Catalog = RecruitmentManager; Integrated Security = true; User Id=sa; Password=";
 
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -33,6 +34,10 @@ namespace RecruitmentManager.DataAccess.Context
         {//algunas conf de nuestras entidades
             modelBuilder.Entity<Client>().HasKey(c => new {c.IdClient} );
             modelBuilder.Entity<Client>().Property(c => c.IdClient).UseIdentityColumn().Metadata.SetBeforeSaveBehavior(Microsoft.EntityFrameworkCore.Metadata.PropertySaveBehavior.Ignore);
+
+            modelBuilder.Entity<FinalReport>().HasKey(fr => new {fr.IdReport} );
+            modelBuilder.Entity<FinalReport>().Property(fr => fr.IdReport).UseIdentityColumn().Metadata.SetBeforeSaveBehavior(Microsoft.EntityFrameworkCore.Metadata.PropertySaveBehavior.Ignore);
+
 
             //modelBuilder.Entity<Client>()
             //    .HasOne(c => c.Client)
