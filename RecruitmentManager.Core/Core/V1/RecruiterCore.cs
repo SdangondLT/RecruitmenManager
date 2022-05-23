@@ -35,7 +35,6 @@ namespace RecruitmentManager.Core.Core.V1
             newRecruiter.Name = entity.Name;
             newRecruiter.PhoneNumber = entity.PhoneNumber;
 
-
             var newRecruiterCreated = _context.Recruiter.Add(newRecruiter);
 
             await _context.SaveChangesAsync();
@@ -65,7 +64,6 @@ namespace RecruitmentManager.Core.Core.V1
             int recordsAffeted = await _context.SaveChangesAsync();
 
             return (recordsAffeted == 1);
-
         }
     }
 }
