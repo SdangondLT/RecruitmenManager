@@ -15,20 +15,20 @@ C:\silena_dangond\backEnd\stage2BE\nuevaMetodologia\RecruitmentManager.Core\obj\
 C:\silena_dangond\backEnd\stage2BE\nuevaMetodologia\RecruitmentManager.Core\obj\Debug\net5.0\refint\RecruitmentManager.Core.dll
 C:\silena_dangond\backEnd\stage2BE\nuevaMetodologia\RecruitmentManager.Core\obj\Debug\net5.0\RecruitmentManager.Core.pdb
 C:\silena_dangond\backEnd\stage2BE\nuevaMetodologia\RecruitmentManager.Core\obj\Debug\net5.0\ref\RecruitmentManager.Core.dll
-D:\JDB\Back\Stage2\Test\RecruitmentManager.Core\bin\Debug\net5.0\RecruitmentManager.Core.deps.json
-D:\JDB\Back\Stage2\Test\RecruitmentManager.Core\bin\Debug\net5.0\RecruitmentManager.Core.dll
-D:\JDB\Back\Stage2\Test\RecruitmentManager.Core\bin\Debug\net5.0\RecruitmentManager.Core.pdb
-D:\JDB\Back\Stage2\Test\RecruitmentManager.Core\bin\Debug\net5.0\RecruitmentManager.DataAccess.dll
-D:\JDB\Back\Stage2\Test\RecruitmentManager.Core\bin\Debug\net5.0\RecruitmentManager.Entities.dll
-D:\JDB\Back\Stage2\Test\RecruitmentManager.Core\bin\Debug\net5.0\RecruitmentManager.DataAccess.pdb
-D:\JDB\Back\Stage2\Test\RecruitmentManager.Core\bin\Debug\net5.0\RecruitmentManager.Entities.pdb
-D:\JDB\Back\Stage2\Test\RecruitmentManager.Core\obj\Debug\net5.0\RecruitmentManager.Core.csproj.AssemblyReference.cache
-D:\JDB\Back\Stage2\Test\RecruitmentManager.Core\obj\Debug\net5.0\RecruitmentManager.Core.GeneratedMSBuildEditorConfig.editorconfig
-D:\JDB\Back\Stage2\Test\RecruitmentManager.Core\obj\Debug\net5.0\RecruitmentManager.Core.AssemblyInfoInputs.cache
-D:\JDB\Back\Stage2\Test\RecruitmentManager.Core\obj\Debug\net5.0\RecruitmentManager.Core.AssemblyInfo.cs
-D:\JDB\Back\Stage2\Test\RecruitmentManager.Core\obj\Debug\net5.0\RecruitmentManager.Core.csproj.CoreCompileInputs.cache
-D:\JDB\Back\Stage2\Test\RecruitmentManager.Core\obj\Debug\net5.0\RecruitmentManager.Core.csproj.CopyComplete
-D:\JDB\Back\Stage2\Test\RecruitmentManager.Core\obj\Debug\net5.0\RecruitmentManager.Core.dll
-D:\JDB\Back\Stage2\Test\RecruitmentManager.Core\obj\Debug\net5.0\refint\RecruitmentManager.Core.dll
-D:\JDB\Back\Stage2\Test\RecruitmentManager.Core\obj\Debug\net5.0\RecruitmentManager.Core.pdb
-D:\JDB\Back\Stage2\Test\RecruitmentManager.Core\obj\Debug\net5.0\ref\RecruitmentManager.Core.dll
+C:\Users\ISABELLE SANCHEZ\Source\Repos\RecruitmenManager\RecruitmentManager.Core\bin\Debug\net5.0\RecruitmentManager.Core.deps.json
+C:\Users\ISABELLE SANCHEZ\Source\Repos\RecruitmenManager\RecruitmentManager.Core\bin\Debug\net5.0\RecruitmentManager.Core.dll
+C:\Users\ISABELLE SANCHEZ\Source\Repos\RecruitmenManager\RecruitmentManager.Core\bin\Debug\net5.0\RecruitmentManager.Core.pdb
+C:\Users\ISABELLE SANCHEZ\Source\Repos\RecruitmenManager\RecruitmentManager.Core\bin\Debug\net5.0\RecruitmentManager.DataAccess.dll
+C:\Users\ISABELLE SANCHEZ\Source\Repos\RecruitmenManager\RecruitmentManager.Core\bin\Debug\net5.0\RecruitmentManager.Entities.dll
+C:\Users\ISABELLE SANCHEZ\Source\Repos\RecruitmenManager\RecruitmentManager.Core\bin\Debug\net5.0\RecruitmentManager.DataAccess.pdb
+C:\Users\ISABELLE SANCHEZ\Source\Repos\RecruitmenManager\RecruitmentManager.Core\bin\Debug\net5.0\RecruitmentManager.Entities.pdb
+C:\Users\ISABELLE SANCHEZ\Source\Repos\RecruitmenManager\RecruitmentManager.Core\obj\Debug\net5.0\RecruitmentManager.Core.csproj.AssemblyReference.cache
+C:\Users\ISABELLE SANCHEZ\Source\Repos\RecruitmenManager\RecruitmentManager.Core\obj\Debug\net5.0\RecruitmentManager.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ISABELLE SANCHEZ\Source\Repos\RecruitmenManager\RecruitmentManager.Core\obj\Debug\net5.0\RecruitmentManager.Core.AssemblyInfoInputs.cache
+C:\Users\ISABELLE SANCHEZ\Source\Repos\RecruitmenManager\RecruitmentManager.Core\obj\Debug\net5.0\RecruitmentManager.Core.AssemblyInfo.cs
+C:\Users\ISABELLE SANCHEZ\Source\Repos\RecruitmenManager\RecruitmentManager.Core\obj\Debug\net5.0\RecruitmentManager.Core.csproj.CoreCompileInputs.cache
+C:\Users\ISABELLE SANCHEZ\Source\Repos\RecruitmenManager\RecruitmentManager.Core\obj\Debug\net5.0\RecruitmentManager.Core.csproj.CopyComplete
+C:\Users\ISABELLE SANCHEZ\Source\Repos\RecruitmenManager\RecruitmentManager.Core\obj\Debug\net5.0\RecruitmentManager.Core.dll
+C:\Users\ISABELLE SANCHEZ\Source\Repos\RecruitmenManager\RecruitmentManager.Core\obj\Debug\net5.0\refint\RecruitmentManager.Core.dll
+C:\Users\ISABELLE SANCHEZ\Source\Repos\RecruitmenManager\RecruitmentManager.Core\obj\Debug\net5.0\RecruitmentManager.Core.pdb
+C:\Users\ISABELLE SANCHEZ\Source\Repos\RecruitmenManager\RecruitmentManager.Core\obj\Debug\net5.0\ref\RecruitmentManager.Core.dll

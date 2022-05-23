@@ -8,19 +8,24 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\DAYHANARAMIREZMORENO\\.nuget\\packages\\": {}
+    "C:\\Users\\ISABELLE SANCHEZ\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\JDB\\Back\\Stage2\\Test\\RecruitmentManager.Contracts\\RecruitmentManager.Contracts.csproj",
+      "projectUniqueName": "C:\\Users\\ISABELLE SANCHEZ\\Source\\Repos\\RecruitmenManager\\RecruitmentManager.Contracts\\RecruitmentManager.Contracts.csproj",
       "projectName": "RecruitmentManager.Contracts",
-      "projectPath": "D:\\JDB\\Back\\Stage2\\Test\\RecruitmentManager.Contracts\\RecruitmentManager.Contracts.csproj",
-      "packagesPath": "C:\\Users\\DAYHANARAMIREZMORENO\\.nuget\\packages\\",
-      "outputPath": "D:\\JDB\\Back\\Stage2\\Test\\RecruitmentManager.Contracts\\obj\\",
+      "projectPath": "C:\\Users\\ISABELLE SANCHEZ\\Source\\Repos\\RecruitmenManager\\RecruitmentManager.Contracts\\RecruitmentManager.Contracts.csproj",
+      "packagesPath": "C:\\Users\\ISABELLE SANCHEZ\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ISABELLE SANCHEZ\\Source\\Repos\\RecruitmenManager\\RecruitmentManager.Contracts\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\DAYHANARAMIREZMORENO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ISABELLE SANCHEZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
