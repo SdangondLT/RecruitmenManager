@@ -6052,23 +6052,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\SANTIAGO SUAREZ\\.nuget\\packages\\": {},
+    "C:\\Users\\SEBASTIAN ROMERO\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\SANTIAGO SUAREZ\\Desktop\\Bootcamp\\Back\\stage2Test\\RecruitmenManager\\RecruitmentManager.DataAccess\\RecruitmentManager.DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\SEBASTIAN ROMERO\\LeanTech\\Backend Training\\Projects\\Quiz Recruitment\\RecruitmenManager\\RecruitmentManager.DataAccess\\RecruitmentManager.DataAccess.csproj",
       "projectName": "RecruitmentManager.DataAccess",
-      "projectPath": "C:\\Users\\SANTIAGO SUAREZ\\Desktop\\Bootcamp\\Back\\stage2Test\\RecruitmenManager\\RecruitmentManager.DataAccess\\RecruitmentManager.DataAccess.csproj",
-      "packagesPath": "C:\\Users\\SANTIAGO SUAREZ\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\SANTIAGO SUAREZ\\Desktop\\Bootcamp\\Back\\stage2Test\\RecruitmenManager\\RecruitmentManager.DataAccess\\obj\\",
+      "projectPath": "C:\\Users\\SEBASTIAN ROMERO\\LeanTech\\Backend Training\\Projects\\Quiz Recruitment\\RecruitmenManager\\RecruitmentManager.DataAccess\\RecruitmentManager.DataAccess.csproj",
+      "packagesPath": "C:\\Users\\SEBASTIAN ROMERO\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\SEBASTIAN ROMERO\\LeanTech\\Backend Training\\Projects\\Quiz Recruitment\\RecruitmenManager\\RecruitmentManager.DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\SANTIAGO SUAREZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\SEBASTIAN ROMERO\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -6083,8 +6083,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\SANTIAGO SUAREZ\\Desktop\\Bootcamp\\Back\\stage2Test\\RecruitmenManager\\RecruitmentManager.Entities\\RecruitmentManager.Entities.csproj": {
-              "projectPath": "C:\\Users\\SANTIAGO SUAREZ\\Desktop\\Bootcamp\\Back\\stage2Test\\RecruitmenManager\\RecruitmentManager.Entities\\RecruitmentManager.Entities.csproj"
+            "C:\\Users\\SEBASTIAN ROMERO\\LeanTech\\Backend Training\\Projects\\Quiz Recruitment\\RecruitmenManager\\RecruitmentManager.Entities\\RecruitmentManager.Entities.csproj": {
+              "projectPath": "C:\\Users\\SEBASTIAN ROMERO\\LeanTech\\Backend Training\\Projects\\Quiz Recruitment\\RecruitmenManager\\RecruitmentManager.Entities\\RecruitmentManager.Entities.csproj"
             }
           }
         }
@@ -6127,7 +6127,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

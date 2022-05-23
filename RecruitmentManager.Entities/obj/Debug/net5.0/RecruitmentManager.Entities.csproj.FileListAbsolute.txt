@@ -10,15 +10,15 @@ C:\silena_dangond\backEnd\stage2BE\nuevaMetodologia\RecruitmentManager.Entities\
 C:\silena_dangond\backEnd\stage2BE\nuevaMetodologia\RecruitmentManager.Entities\obj\Debug\net5.0\refint\RecruitmentManager.Entities.dll
 C:\silena_dangond\backEnd\stage2BE\nuevaMetodologia\RecruitmentManager.Entities\obj\Debug\net5.0\RecruitmentManager.Entities.pdb
 C:\silena_dangond\backEnd\stage2BE\nuevaMetodologia\RecruitmentManager.Entities\obj\Debug\net5.0\ref\RecruitmentManager.Entities.dll
-C:\Users\SANTIAGO SUAREZ\Desktop\Bootcamp\Back\stage2Test\RecruitmenManager\RecruitmentManager.Entities\bin\Debug\net5.0\RecruitmentManager.Entities.deps.json
-C:\Users\SANTIAGO SUAREZ\Desktop\Bootcamp\Back\stage2Test\RecruitmenManager\RecruitmentManager.Entities\bin\Debug\net5.0\RecruitmentManager.Entities.dll
-C:\Users\SANTIAGO SUAREZ\Desktop\Bootcamp\Back\stage2Test\RecruitmenManager\RecruitmentManager.Entities\bin\Debug\net5.0\RecruitmentManager.Entities.pdb
-C:\Users\SANTIAGO SUAREZ\Desktop\Bootcamp\Back\stage2Test\RecruitmenManager\RecruitmentManager.Entities\obj\Debug\net5.0\RecruitmentManager.Entities.csproj.AssemblyReference.cache
-C:\Users\SANTIAGO SUAREZ\Desktop\Bootcamp\Back\stage2Test\RecruitmenManager\RecruitmentManager.Entities\obj\Debug\net5.0\RecruitmentManager.Entities.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\SANTIAGO SUAREZ\Desktop\Bootcamp\Back\stage2Test\RecruitmenManager\RecruitmentManager.Entities\obj\Debug\net5.0\RecruitmentManager.Entities.AssemblyInfoInputs.cache
-C:\Users\SANTIAGO SUAREZ\Desktop\Bootcamp\Back\stage2Test\RecruitmenManager\RecruitmentManager.Entities\obj\Debug\net5.0\RecruitmentManager.Entities.AssemblyInfo.cs
-C:\Users\SANTIAGO SUAREZ\Desktop\Bootcamp\Back\stage2Test\RecruitmenManager\RecruitmentManager.Entities\obj\Debug\net5.0\RecruitmentManager.Entities.csproj.CoreCompileInputs.cache
-C:\Users\SANTIAGO SUAREZ\Desktop\Bootcamp\Back\stage2Test\RecruitmenManager\RecruitmentManager.Entities\obj\Debug\net5.0\RecruitmentManager.Entities.dll
-C:\Users\SANTIAGO SUAREZ\Desktop\Bootcamp\Back\stage2Test\RecruitmenManager\RecruitmentManager.Entities\obj\Debug\net5.0\refint\RecruitmentManager.Entities.dll
-C:\Users\SANTIAGO SUAREZ\Desktop\Bootcamp\Back\stage2Test\RecruitmenManager\RecruitmentManager.Entities\obj\Debug\net5.0\RecruitmentManager.Entities.pdb
-C:\Users\SANTIAGO SUAREZ\Desktop\Bootcamp\Back\stage2Test\RecruitmenManager\RecruitmentManager.Entities\obj\Debug\net5.0\ref\RecruitmentManager.Entities.dll
+C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\Quiz Recruitment\RecruitmenManager\RecruitmentManager.Entities\bin\Debug\net5.0\RecruitmentManager.Entities.deps.json
+C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\Quiz Recruitment\RecruitmenManager\RecruitmentManager.Entities\bin\Debug\net5.0\RecruitmentManager.Entities.dll
+C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\Quiz Recruitment\RecruitmenManager\RecruitmentManager.Entities\bin\Debug\net5.0\RecruitmentManager.Entities.pdb
+C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\Quiz Recruitment\RecruitmenManager\RecruitmentManager.Entities\obj\Debug\net5.0\RecruitmentManager.Entities.csproj.AssemblyReference.cache
+C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\Quiz Recruitment\RecruitmenManager\RecruitmentManager.Entities\obj\Debug\net5.0\RecruitmentManager.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\Quiz Recruitment\RecruitmenManager\RecruitmentManager.Entities\obj\Debug\net5.0\RecruitmentManager.Entities.AssemblyInfoInputs.cache
+C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\Quiz Recruitment\RecruitmenManager\RecruitmentManager.Entities\obj\Debug\net5.0\RecruitmentManager.Entities.AssemblyInfo.cs
+C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\Quiz Recruitment\RecruitmenManager\RecruitmentManager.Entities\obj\Debug\net5.0\RecruitmentManager.Entities.csproj.CoreCompileInputs.cache
+C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\Quiz Recruitment\RecruitmenManager\RecruitmentManager.Entities\obj\Debug\net5.0\RecruitmentManager.Entities.dll
+C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\Quiz Recruitment\RecruitmenManager\RecruitmentManager.Entities\obj\Debug\net5.0\refint\RecruitmentManager.Entities.dll
+C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\Quiz Recruitment\RecruitmenManager\RecruitmentManager.Entities\obj\Debug\net5.0\RecruitmentManager.Entities.pdb
+C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\Quiz Recruitment\RecruitmenManager\RecruitmentManager.Entities\obj\Debug\net5.0\ref\RecruitmentManager.Entities.dll

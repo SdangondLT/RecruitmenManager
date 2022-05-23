@@ -2,9 +2,9 @@
 
 namespace RecruitmentManager.Entities.Entities
 {
-    public class Candidate
+    public class Skill
     {
         [Key]
-        public int IdCandidate { get; set; }
+        public int IdSkill { get; set; }
     }
 }
