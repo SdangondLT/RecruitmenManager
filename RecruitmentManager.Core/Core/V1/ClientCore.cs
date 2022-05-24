@@ -3,8 +3,10 @@ using Microsoft.EntityFrameworkCore;
 using RecruitmentManager.DataAccess.Context;
 using RecruitmentManager.Entities.DTOs;
 using RecruitmentManager.Entities.Entities;
-
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace RecruitmentManager.Core.Core.V1
@@ -44,12 +46,22 @@ namespace RecruitmentManager.Core.Core.V1
             client.Address = clientToUpdated.Address;
             client.PhoneNumber = clientToUpdated.PhoneNumber;
 
-            _context.Client.Update(client);           
+            _context.Client.Update(client);
 
-            int recordsAffected = await _context.SaveChangesAsync();
+            int recordsAffeted = await _context.SaveChangesAsync();
 
-            return (recordsAffected == 1);
+            return (recordsAffeted == 1);
         }
 
+        public async Task<bool> DeleteClientAsync(Client clientToDelete)
+        {
+            Client client = _context.Client.Find(clientToDelete.IdClient);
+           
+            _context.Client.Remove(client);
+
+            int recordsAffeted = await _context.SaveChangesAsync();
+
+            return (recordsAffeted == 1);
+        }
     }
 }

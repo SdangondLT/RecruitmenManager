@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace RecruitmentManager.Entities.DTOs
 {
-    public class ClientCreateDto
+    public class RecruiterCreateDto
     {
         public string Name { get; set; }
-        public string Address { get; set; }
         public string PhoneNumber { get; set; }
     }
 }
