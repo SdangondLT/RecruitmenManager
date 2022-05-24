@@ -46,12 +46,22 @@ namespace RecruitmentManager.Core.Core.V1
             client.Address = clientToUpdated.Address;
             client.PhoneNumber = clientToUpdated.PhoneNumber;
 
-            _context.Client.Update(client);           
+            _context.Client.Update(client);
 
             int recordsAffeted = await _context.SaveChangesAsync();
 
             return (recordsAffeted == 1);
         }
 
+        public async Task<bool> DeleteClientAsync(Client clientToDelete)
+        {
+            Client client = _context.Client.Find(clientToDelete.IdClient);
+           
+            _context.Client.Remove(client);
+
+            int recordsAffeted = await _context.SaveChangesAsync();
+
+            return (recordsAffeted == 1);
+        }
     }
 }

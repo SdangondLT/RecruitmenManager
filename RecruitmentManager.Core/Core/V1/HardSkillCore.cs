@@ -15,60 +15,38 @@ namespace RecruitmentManager.Core.Core.V1
             _context = new SqlServerContext();
         }
 
-        public async Task<List<HardSkill>> GetVacanciesAsync()
+        public async Task<List<HardSkill>> GetHardSkillsAsync()
         {
             return await _context.HardSkill.ToListAsync();
         }
 
-        public async Task<HardSkill> CreateHardSkillAsync(HardSkillCreateDto entity)
+        public async Task<HardSkill> CreateHardSkillAsync(HardSkillCreateDTO hardSkill)
         {
-            HardSkill newHardSkill = new();
-
-            newHardSkill.IdRecruiter = entity.IdRecruiter;
-            newHardSkill.IdClient = entity.IdClient;
-            newHardSkill.Seniority = entity.Seniority;
-            newHardSkill.Skills = entity.Skills;
-            newHardSkill.AvailableVacancies = entity.AvailableVacancies;
-            newHardSkill.Description = entity.Description;
-            newHardSkill.IsOpen = entity.IsOpen;
-            newHardSkill.Candidates = entity.Candidates;
-            newHardSkill.WinnerCandidates = entity.WinnerCandidates;
+            HardSkill newHardSkill = new()
+            {
+                Name = hardSkill.Name,
+            };
 
             var newHardSkillCreated = _context.HardSkill.Add(newHardSkill);
-
             await _context.SaveChangesAsync();
-
             return newHardSkillCreated.Entity;
         }
 
-        public async Task<bool> UpdateHardSkillAsync(HardSkill hardSkillToUpdate)
+        public async Task<bool> UpdateHardSkillAsync(HardSkill entity)
         {
-            HardSkill hardSkilll = _context.HardSkilll.Find(hardSkilllToUpdate.IdHardSkill);
-
-            hardSkill.IdRecruiter = hardSkillToUpdate.IdRecruiter;
-            hardSkill.IdClient = hardSkillToUpdate.IdClient;
-            hardSkill.Seniority = hardSkillToUpdate.Seniority;
-            hardSkill.Skills = hardSkillToUpdate.Skills;
-            hardSkill.AvailableVacancies = hardSkillToUpdate.AvailableVacancies;
-            hardSkill.Description = hardSkillToUpdate.Description;
-            hardSkill.IsOpen = hardSkillToUpdate.IsOpen;
-            hardSkill.Candidates = hardSkillToUpdate.Candidates;
-            hardSkill.WinnerCandidates = hardSkillToUpdate.WinnerCandidates;
-
+            HardSkill hardSkill = _context.HardSkill.Find(entity.IdHardSkill);
+            hardSkill.Name = entity.Name;
             _context.HardSkill.Update(hardSkill);
-
             int recordsAffected = await _context.SaveChangesAsync();
-
             return (recordsAffected == 1);
         }
 
-        public async Task<bool> DeleteHardSkillAsync(int idHardSkill)
+        public async Task<bool> DeleteHardSkillAsync(int hardSkillId)
         {
-            HardSkill hardSkill = _context.HardSkill.Find(idHardSkill);
-
-            _context.Remove(hardSkill);
-
-            return await _context.SaveChangesAsync() != 0;
+            HardSkill hardSkill = _context.HardSkill.Find(hardSkillId);
+            _context.HardSkill.Remove(hardSkill);
+            int recordsAffeted = await _context.SaveChangesAsync();
+            return (recordsAffeted == 1);
         }
     }
 }

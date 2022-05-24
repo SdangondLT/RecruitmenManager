@@ -11,41 +11,41 @@ namespace RecruitmentManager.Services.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class SoftKillsController : ControllerBase
+    public class SoftSkillsController : ControllerBase
     {
         private readonly SoftSkillCore _softSkillCore;
 
-        public SoftKillsController()
+        public SoftSkillsController()
         {
             _softSkillCore = new SoftSkillCore();
-        }
 
-        // GET: api/<SoftKillsController>
+        }
+        // GET: api/<SoftSkillsController>
         [HttpGet]
         public async Task<IEnumerable<SoftSkill>> Get()
         {
-            return await _softSkillCore.GetSoftKillsAsync();
+            return await _softSkillCore.GetSoftSkillsAsync();
         }
 
-        // POST api/<SoftKillsController>
+        // POST api/<SoftSkillsController>
         [HttpPost]
-        public async Task<SoftSkill> Post([FromBody] SoftSkillCreateDto softSkill)
+        public async Task<SoftSkill> Post([FromBody] SoftSkillCreateDTO softSkill)
         {
             return await _softSkillCore.CreateSoftSkillAsync(softSkill);
         }
 
-        // PUT api/<SoftKillsController>/5
+        // PUT api/<SoftSkillsController>/5
         [HttpPut]
-        public async Task<bool> Put([FromBody] SoftSkill softSkill)
+        public async Task<bool> Put(int id, [FromBody] SoftSkill softSkill)
         {
             return await _softSkillCore.UpdateSoftSkillAsync(softSkill);
         }
 
-        // DELETE api/<SoftKillsController>/5
+        // DELETE api/<SoftSkillsController>/5
         [HttpDelete("{id}")]
-        public async Task<bool> Delete(int softSkillId)
+        public async Task<bool> Delete(int id)
         {
-            return await _softSkillCore.DeleteSoftSkillAsync(softSkillId);
+            return await _softSkillCore.DeleteSoftSkillAsync(id);
         }
     }
 }

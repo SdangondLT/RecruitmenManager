@@ -1,8 +1,7 @@
-namespace RecruitmentManager.Entities.DTOs
+﻿namespace RecruitmentManager.Entities.DTOs
 {
-    public class HardSkillCreateDto
+    public class HardSkillCreateDTO
     {
-        public int IdHardSkill { get; set; }
-        public string Description { get; set; }
+        public string Name { get; set; }
     }
 }
