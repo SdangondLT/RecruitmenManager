@@ -18,16 +18,22 @@ namespace RecruitmentManager.Core.Core.V1
             _context = new SqlServerContext();
         }
 
-        public async Task<List<Recruiter>> GetRecruiters()
+        public async Task<List<Recruiter>> GetRecruitersAsync()
         {
             return await _context.Recruiter.ToListAsync();
         }
 
-        public async Task<Recruiter> CreateRecruiter(RecruiterCreateDto recruiter)
+        public async Task<Recruiter> GetRecruiterAsync(int recruiterId)
         {
-            Recruiter newRecruiter = new Recruiter();
+            return await _context.Recruiter.FindAsync(recruiterId);
+        }
 
-            newRecruiter.Name = recruiter.Name;
+        public async Task<Recruiter> CreateRecruitersAsync(RecruiterCreateDto entity)
+        {
+            Recruiter newRecruiter = new();
+
+            newRecruiter.Name = entity.Name;
+            newRecruiter.PhoneNumber = entity.PhoneNumber;
 
             var newRecruiterCreated = _context.Recruiter.Add(newRecruiter);
 
@@ -36,28 +42,28 @@ namespace RecruitmentManager.Core.Core.V1
             return newRecruiterCreated.Entity;
         }
 
-        public async Task<bool> UpdateRecruiter(Recruiter recruiterToUpdate)
+        public async Task<bool> UpdateRecruitersAsync(Recruiter recruiterToUpdated)
         {
-            Recruiter recruiter = _context.Recruiter.Find(recruiterToUpdate.IdRecruiter);
-
-            recruiter.Name = recruiterToUpdate.Name;
+            Recruiter recruiter = _context.Recruiter.Find(recruiterToUpdated.IdRecruiter);
+            recruiter.Name = recruiterToUpdated.Name;
+            recruiter.PhoneNumber = recruiterToUpdated.PhoneNumber;
 
             _context.Recruiter.Update(recruiter);
 
-            int recruitersUpdated =  await _context.SaveChangesAsync();
+            int recordsAffeted = await _context.SaveChangesAsync();
 
-            return (recruitersUpdated == 1);
+            return (recordsAffeted == 1);
         }
 
-        public async Task<List<Recruiter>> DeleteRecruiter(int id)
+        public async Task<bool> DeleteRecruitersAsync(Recruiter recruiterToDelete)
         {
-            Recruiter recruiterToDelete = _context.Recruiter.Find(id);
+            Recruiter recruiter = _context.Recruiter.Find(recruiterToDelete.IdRecruiter);
 
-            _context.Recruiter.Remove(recruiterToDelete);
+            _context.Recruiter.Remove(recruiter);
 
-            await _context.SaveChangesAsync();
+            int recordsAffeted = await _context.SaveChangesAsync();
 
-            return await _context.Recruiter.ToListAsync();
+            return (recordsAffeted == 1);
         }
     }
 }

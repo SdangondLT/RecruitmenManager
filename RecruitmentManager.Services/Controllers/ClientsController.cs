@@ -50,8 +50,9 @@ namespace RecruitmentManager.Services.Controllers
 
         // DELETE api/<ClientController>/5
         [HttpDelete]
-        public void Delete(int id)
+        public async Task<bool> Delete(Client client)
         {
+            return await _clientCore.DeleteClientAsync(client);
         }
     }
 }

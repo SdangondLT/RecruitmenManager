@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,8 +10,6 @@ namespace RecruitmentManager.Entities.Entities
     {
         public int IdRecruiter { get; set; }
         public string Name { get; set; }
-        //public List<HardSkill> HardSkills { get; set; }
-        //public List<SoftSkill> SoftSkills { get; set; }
-        //public SelectionProcesses[] SelectionProcesses { get; set; }
+        public string PhoneNumber { get; set; }
     }
 }

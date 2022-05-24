@@ -13,46 +13,46 @@ namespace RecruitmentManager.Services.Controllers
     [ApiController]
     public class RecruitersController : ControllerBase
     {
-        private readonly RecruiterCore _RecruiterCore;
+        private readonly RecruiterCore _recruiterCore;
 
         public RecruitersController()
         {
-            _RecruiterCore = new RecruiterCore();
+            _recruiterCore = new RecruiterCore();
         }
 
         // GET: api/<RecruitersController>
         [HttpGet]
         public async Task<IEnumerable<Recruiter>> Get()
         {
-            return await _RecruiterCore.GetRecruiters();
+            return await _recruiterCore.GetRecruitersAsync();
         }
 
         // GET api/<RecruitersController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public async Task<Recruiter> Get(int id)
         {
-            return "value";
+            return await _recruiterCore.GetRecruiterAsync(id);
         }
 
         // POST api/<RecruitersController>
         [HttpPost]
         public async Task<Recruiter> Post([FromBody] RecruiterCreateDto recruiter)
         {
-            return await _RecruiterCore.CreateRecruiter(recruiter);
+            return await _recruiterCore.CreateRecruitersAsync(recruiter);
         }
 
         // PUT api/<RecruitersController>/5
         [HttpPut]
         public async Task<bool> Put([FromBody] Recruiter recruiter)
         {
-            return await _RecruiterCore.UpdateRecruiter(recruiter);
+            return await _recruiterCore.UpdateRecruitersAsync(recruiter);
         }
 
         // DELETE api/<RecruitersController>/5
-        [HttpDelete("{id}")]
-        public async Task<IEnumerable<Recruiter>> Delete(int id)
+        [HttpDelete]
+        public async Task<bool> Delete(Recruiter recruiter)
         {
-            return await _RecruiterCore.DeleteRecruiter(id);
+            return await _recruiterCore.DeleteRecruitersAsync(recruiter);
         }
     }
 }
