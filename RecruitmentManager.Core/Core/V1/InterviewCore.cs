@@ -15,7 +15,7 @@ namespace RecruitmentManager.Core.Core.V1
         private readonly SqlServerContext _context;
         public InterviewCore()
         {
-            _context = new SqlServerContext();
+            //_context = new SqlServerContext();
         }
 
         public async Task<Interview> GetInterviewAsync(int id)

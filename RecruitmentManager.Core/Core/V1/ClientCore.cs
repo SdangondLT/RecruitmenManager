@@ -1,27 +1,32 @@
 ﻿
+using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using RecruitmentManager.Core.Utils;
+using RecruitmentManager.Core.Core.ErrorsHandler;
 using RecruitmentManager.DataAccess.Context;
 using RecruitmentManager.Entities.DTOs;
 using RecruitmentManager.Entities.Entities;
+using RecruitmentManager.Entities.Utils;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace RecruitmentManager.Core.Core.V1
 {
     public class ClientCore
     {
+        private readonly SqlServerContext _context;
         private readonly ILogger<Client> _logger;
-        public ClientCore(ILogger<Client> logger)
+        private readonly ErrorHandler<Client> _errorHandler;
+        private readonly IMapper _mapper;
+
+        public ClientCore(ILogger<Client> logger, IMapper mapper, SqlServerContext context)
         {
             _logger = logger;
-            _context = new SqlServerContext();
-
+            _errorHandler = new ErrorHandler<Client>(logger);
+            _context = context;
+            _mapper = mapper;
         }
 
         public async Task<ResponseService<List<Client>>> GetClientsAsync()
@@ -29,34 +34,29 @@ namespace RecruitmentManager.Core.Core.V1
             try
             {
                 var response = await _context.Client.ToListAsync();
-
-                return new ResponseService<List<Client>>(false, response.Count == 0 ? "No records found" : $"{response.Count} records found", System.Net.HttpStatusCode.OK, response);
-
+                return new ResponseService<List<Client>>(false, response.Count == 0 ? "No records found" : $"{response.Count} records found", HttpStatusCode.OK, response);
             }
             catch (Exception ex)
             {
-                return new ResponseService<List<Client>>(true, $"Error:{ex.Message}", System.Net.HttpStatusCode.InternalServerError, new List<Client>());
+                return _errorHandler.Error(ex, "GetClientAsync", new List<Client>());
             }
-
         }
 
         public async Task<ResponseService<Client>> CreateClientAsync(ClientCreateDto entity)
         {
             Client newClient = new();
-            newClient.Name = entity.Name;
-            newClient.Address = entity.Address;
-            newClient.PhoneNumber = entity.PhoneNumber;
+            newClient = _mapper.Map<Client>(entity);
 
             try
             {
                 var newClientCreated = _context.Client.Add(newClient);
                 await _context.SaveChangesAsync();
 
-                return new ResponseService<Client>(false, "Succefully created Client", HttpStatusCode.Created, newClientCreated.Entity); ;
+                return new ResponseService<Client>(false, "Succefully created Client", HttpStatusCode.Created, newClientCreated.Entity);
             }
             catch (Exception ex)
             {
-                return new ResponseService<Client>(true, $"Record not created {ex.Message}", HttpStatusCode.InternalServerError, new Client());
+                return _errorHandler.Error(ex, "CreateClientAsync", new Client());
             }
         }
 

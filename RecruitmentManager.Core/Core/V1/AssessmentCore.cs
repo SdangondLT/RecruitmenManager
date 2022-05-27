@@ -16,7 +16,7 @@ namespace RecruitmentManager.Core.Core.V1
         private readonly SqlServerContext _context;
         public AssessmentCore()
         {
-            _context = new SqlServerContext();
+            //_context = new SqlServerContext();
         }
 
         public async Task<List<Assessment>> GetAssessmentsAsync()

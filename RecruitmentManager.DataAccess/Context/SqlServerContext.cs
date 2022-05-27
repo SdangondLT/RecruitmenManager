@@ -1,10 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RecruitmentManager.Entities.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RecruitmentManager.DataAccess.Context
 {
@@ -23,14 +18,7 @@ namespace RecruitmentManager.DataAccess.Context
         public DbSet<Vacancy> Vacancy { get; set; }//Sebastian
         public DbSet<Candidate> Candidate { get; set; }//Isabella
 
-        public SqlServerContext()
-        {
-            _connectionString = @"Data Source = LTUSPE-L0004\SQLEXPRESS; Initial Catalog = RecruitmentManager; Integrated Security = true; User Id=sa; Password=";
-        }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer(_connectionString);
-        }
+        public SqlServerContext(DbContextOptions<SqlServerContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

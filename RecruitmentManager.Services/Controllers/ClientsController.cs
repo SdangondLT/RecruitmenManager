@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using RecruitmentManager.Core.Core.V1;
+using RecruitmentManager.DataAccess.Context;
 using RecruitmentManager.Entities.DTOs;
 using RecruitmentManager.Entities.Entities;
 using System.Collections.Generic;
@@ -12,13 +14,13 @@ namespace RecruitmentManager.Services.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ClientsController : ControllerBase
+    public class ClientController : ControllerBase
     {
         private readonly ClientCore _clientCore;
 
-        public ClientsController(ILogger<Client> logger)
+        public ClientController(ILogger<Client> logger, IMapper mapper, SqlServerContext context)
         {
-            _clientCore = new ClientCore();
+            _clientCore = new ClientCore(logger, mapper, context);
         }
 
         // GET: api/<ClientController>

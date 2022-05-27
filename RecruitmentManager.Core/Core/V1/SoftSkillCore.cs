@@ -13,7 +13,7 @@ namespace RecruitmentManager.Core.Core.V1
 
         public SoftSkillCore()
         {
-            _context = new SqlServerContext();
+            //_context = new SqlServerContext();
         }
 
         public async Task<List<SoftSkill>> GetSoftSkillsAsync()

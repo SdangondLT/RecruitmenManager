@@ -16,7 +16,7 @@ namespace RecruitmentManager.Core.Core.V1
 
         public FinalReportCore()
         {
-            _context = new SqlServerContext();
+            //_context = new SqlServerContext();
         }
 
         public async Task<List<FinalReport>> GetFinalReportsAsync()

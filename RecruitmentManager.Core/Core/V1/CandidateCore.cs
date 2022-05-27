@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using RecruitmentManager.Core.Utils;
 using RecruitmentManager.DataAccess.Context;
 using RecruitmentManager.Entities.DTOs;
 using RecruitmentManager.Entities.Entities;
+using RecruitmentManager.Entities.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +20,7 @@ namespace RecruitmentManager.Core.Core.V1
 
         public CandidateCore()
         {
-            _context = new SqlServerContext();
+            //_context = new SqlServerContext();
         }
         public async Task<ResponseService<List<Candidate>>> GetCandidateAsync()
         {
