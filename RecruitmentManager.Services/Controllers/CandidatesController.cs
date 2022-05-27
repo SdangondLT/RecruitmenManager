@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using RecruitmentManager.Core.Core.V1;
 using RecruitmentManager.Entities.DTOs;
 using RecruitmentManager.Entities.Entities;
@@ -22,9 +23,10 @@ namespace RecruitmentManager.Services.Controllers
 
         // GET: api/<CandidatesController>
         [HttpGet]
-        public async Task<IEnumerable<Candidate>> Get()
+        public async Task<ActionResult<IEnumerable<Candidate>>> Get()
         {
-            return await _candidateCore.GetClientsAsync();
+            var response = await _candidateCore.GetCandidateAsync();
+            return StatusCode((int)response.StatusHttp, response);
         }
 
         // GET api/<CandidatesController>/5
@@ -36,9 +38,10 @@ namespace RecruitmentManager.Services.Controllers
 
         // POST api/<CandidatesController>
         [HttpPost]
-        public async Task<Candidate> Post([FromBody] CandidateCreateDto candidate)
+        public async Task<ActionResult<Client>> Post([FromBody] CandidateCreateDto candidate)
         {
-            return await _candidateCore.CreateCandidateAsync(candidate);
+            var response = await _candidateCore.CreateCandidateAsync(candidate);
+            return StatusCode((int)response.StatusHttp, response);
         }
 
         // PUT api/<CandidatesController>/5

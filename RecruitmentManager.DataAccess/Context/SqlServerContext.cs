@@ -25,7 +25,7 @@ namespace RecruitmentManager.DataAccess.Context
 
         public SqlServerContext()
         {
-            _connectionString = @"Data Source = DESKTOP-IF9J0OU\SQLEXPRESS; Initial Catalog = RecruitmentManager; Integrated Security = true; User Id=sa; Password=";
+            _connectionString = @"Data Source = LTUSPE-L0004\SQLEXPRESS; Initial Catalog = RecruitmentManager; Integrated Security = true; User Id=sa; Password=";
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -36,8 +36,9 @@ namespace RecruitmentManager.DataAccess.Context
         {
             modelBuilder.Entity<Client>().HasKey(c => new { c.IdClient });
             modelBuilder.Entity<Client>().Property(c => c.IdClient).UseIdentityColumn().Metadata.SetBeforeSaveBehavior(Microsoft.EntityFrameworkCore.Metadata.PropertySaveBehavior.Ignore);
-
-            modelBuilder.Entity<Recruiter>().HasKey(c => new { c.IdRecruiter });
+            //modelBuilder.Entity<Client>().ToTable("Clients");
+            
+                modelBuilder.Entity<Recruiter>().HasKey(c => new { c.IdRecruiter });
             modelBuilder.Entity<Recruiter>().Property(c => c.IdRecruiter).UseIdentityColumn().Metadata.SetBeforeSaveBehavior(Microsoft.EntityFrameworkCore.Metadata.PropertySaveBehavior.Ignore);
 
             modelBuilder.Entity<HardSkill>().HasKey(s => new { s.IdHardSkill });
