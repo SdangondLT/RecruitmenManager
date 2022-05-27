@@ -1,4 +1,4 @@
-﻿namespace RecruitmentManager.Entities.Entities
+namespace RecruitmentManager.Entities.Entities
 {
     public class HardSkill
     {
