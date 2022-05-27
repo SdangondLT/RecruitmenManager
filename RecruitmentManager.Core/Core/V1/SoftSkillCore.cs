@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using RecruitmentManager.DataAccess.Context;
 using RecruitmentManager.Entities.DTOs;
 using RecruitmentManager.Entities.Entities;
@@ -10,7 +10,6 @@ namespace RecruitmentManager.Core.Core.V1
     public class SoftSkillCore
     {
         private readonly SqlServerContext _context;
-
         public SoftSkillCore()
         {
             _context = new SqlServerContext();

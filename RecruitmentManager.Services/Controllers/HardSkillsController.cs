@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using RecruitmentManager.Core.Core.V1;
 using RecruitmentManager.Entities.DTOs;
 using RecruitmentManager.Entities.Entities;
@@ -13,7 +13,6 @@ namespace RecruitmentManager.Services.Controllers
     [ApiController]
     public class HardSkillsController : ControllerBase
     {
-
         private readonly HardSkillCore _hardSkillCore;
 
         public HardSkillsController()
