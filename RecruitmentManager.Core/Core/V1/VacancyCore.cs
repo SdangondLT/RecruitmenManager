@@ -1,8 +1,14 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+using RecruitmentManager.Core.Core.ErrorsHandler;
 using RecruitmentManager.DataAccess.Context;
 using RecruitmentManager.Entities.DTOs;
 using RecruitmentManager.Entities.Entities;
+using RecruitmentManager.Entities.Utils;
+using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Threading.Tasks;
 
 namespace RecruitmentManager.Core.Core.V1
@@ -10,65 +16,78 @@ namespace RecruitmentManager.Core.Core.V1
     public class VacancyCore
     {
         private readonly SqlServerContext _context;
-        public VacancyCore()
+        private readonly ILogger<Vacancy> _logger;
+        private readonly ErrorHandler<Vacancy> _errorHandler;
+        private readonly IMapper _mapper;
+        public VacancyCore(ILogger<Vacancy> logger, IMapper mapper, SqlServerContext context)
         {
-            //_context = new SqlServerContext();
+            _logger = logger;
+            _errorHandler = new ErrorHandler<Vacancy>(logger);
+            _context = context;
+            _mapper = mapper;
         }
 
-        public async Task<List<Vacancy>> GetVacanciesAsync()
+        public async Task<ResponseService<List<Vacancy>>> GetVacanciesAsync()
         {
-            return await _context.Vacancy.ToListAsync();
+            try
+            {
+                var response = await _context.Vacancy.ToListAsync();
+                return new ResponseService<List<Vacancy>>(false, response.Count == 0 ? "No records found" : $"{response.Count} records found", HttpStatusCode.OK, response);
+            }
+            catch (Exception ex)
+            {
+                return _errorHandler.Error(ex, "GetVacanciesAsync", new List<Vacancy>());
+            }
         }
 
-        public async Task<Vacancy> CreateVacancyAsync(VacancyCreateDto entity)
+        public async Task<ResponseService<Vacancy>> CreateVacancyAsync(VacancyCreateDto entity)
         {
             Vacancy newVacancy = new();
+            newVacancy = _mapper.Map<Vacancy>(entity);
 
-            newVacancy.IdRecruiter = entity.IdRecruiter;
-            newVacancy.IdClient = entity.IdClient;
-            newVacancy.Seniority = entity.Seniority;
-            newVacancy.Skills = entity.Skills;
-            newVacancy.AvailableVacancies = entity.AvailableVacancies;
-            newVacancy.Description = entity.Description;
-            newVacancy.IsOpen = entity.IsOpen;
-            newVacancy.Candidates = entity.Candidates;
-            newVacancy.WinnerCandidates = entity.WinnerCandidates;
+            try
+            {
+                var newVacancyCreated = _context.Vacancy.Add(newVacancy);
+                await _context.SaveChangesAsync();
 
-            var newVacancyCreated = _context.Vacancy.Add(newVacancy);
-
-            await _context.SaveChangesAsync();
-
-            return newVacancyCreated.Entity;
+                return new ResponseService<Vacancy>(false, "Succefully Created Vacancy", HttpStatusCode.Created, newVacancyCreated.Entity);
+            }
+            catch (Exception ex)
+            {
+                return _errorHandler.Error(ex, "CreateVacancyAsync", new Vacancy());
+            }
         }
 
-        public async Task<bool> UpdateVacancyAsync(Vacancy vacancyToUpdate)
+        public async Task<ResponseService<bool>> UpdateVacancyAsync(Vacancy vacancyToUpdate)
         {
-            Vacancy vacancy = _context.Vacancy.Find(vacancyToUpdate.IdVacancy);
+            Vacancy vacancy = _mapper.Map<Vacancy>(vacancyToUpdate);
 
-            vacancy.IdRecruiter = vacancyToUpdate.IdRecruiter;
-            vacancy.IdClient = vacancyToUpdate.IdClient;
-            vacancy.Seniority = vacancyToUpdate.Seniority;
-            vacancy.Skills = vacancyToUpdate.Skills;
-            vacancy.AvailableVacancies = vacancyToUpdate.AvailableVacancies;
-            vacancy.Description = vacancyToUpdate.Description;
-            vacancy.IsOpen = vacancyToUpdate.IsOpen;
-            vacancy.Candidates = vacancyToUpdate.Candidates;
-            vacancy.WinnerCandidates = vacancyToUpdate.WinnerCandidates;
-
-            _context.Vacancy.Update(vacancy);
-
-            int recordsAffected = await _context.SaveChangesAsync();
-
-            return (recordsAffected == 1);
+            try
+            {
+                _context.Vacancy.Update(vacancy);
+                int recordsAffected = await _context.SaveChangesAsync();
+                return new ResponseService<bool>(false, "Succefully Updated Vacancy", HttpStatusCode.OK, true);
+            }
+            catch (Exception ex)
+            {
+                return _errorHandler.Error(ex, "UpdateVacancyAsync", false);
+            }
         }
 
-        public async Task<bool> DeleteVacancyAsync(int idVacancy)
+        public async Task<ResponseService<bool>> DeleteVacancyAsync(int idVacancy)
         {
             Vacancy vacancy = _context.Vacancy.Find(idVacancy);
 
-            _context.Remove(vacancy);
-
-            return await _context.SaveChangesAsync() != 0;
+            try
+            {
+                _context.Remove(vacancy);
+                await _context.SaveChangesAsync();
+                return new ResponseService<bool>(false, "Succefully Deleted Vacancy", HttpStatusCode.OK, true);
+            }
+            catch (Exception ex)
+            {
+                return _errorHandler.Error(ex, "DeleteVacancyAsync", false);
+            }
         }
     }
 }

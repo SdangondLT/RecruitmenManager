@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using RecruitmentManager.Core.Core.V1;
+using RecruitmentManager.DataAccess.Context;
 using RecruitmentManager.Entities.DTOs;
 using RecruitmentManager.Entities.Entities;
 using System.Collections.Generic;
@@ -15,37 +18,41 @@ namespace RecruitmentManager.Services.Controllers
     {
         private readonly VacancyCore _vacancyCore;
 
-        public VacanciesController()
+        public VacanciesController(ILogger<Vacancy> logger, IMapper mapper, SqlServerContext context)
         {
-            _vacancyCore = new VacancyCore();
+            _vacancyCore = new VacancyCore(logger, mapper, context);
         }
 
         // GET: api/<VacanciesController>
         [HttpGet]
-        public async Task<IEnumerable<Vacancy>> Get()
+        public async Task<ActionResult<IEnumerable<Vacancy>>> Get()
         {
-            return await _vacancyCore.GetVacanciesAsync();
+            var response = await _vacancyCore.GetVacanciesAsync();
+            return StatusCode((int)response.StatusHttp, response);
         }
 
         // POST api/<VacanciesController>
         [HttpPost]
-        public async Task<Vacancy> Post([FromBody] VacancyCreateDto vacancy)
+        public async Task<ActionResult<Vacancy>> Post([FromBody] VacancyCreateDto vacancy)
         {
-            return await _vacancyCore.CreateVacancyAsync(vacancy);
+            var response = await _vacancyCore.CreateVacancyAsync(vacancy);
+            return StatusCode((int)response.StatusHttp, response);
         }
 
         // PUT api/<VacanciesController>/5
         [HttpPut]
-        public async Task<bool> Put([FromBody] Vacancy vacancy)
+        public async Task<ActionResult<bool>> Put([FromBody] Vacancy vacancy)
         {
-            return await _vacancyCore.UpdateVacancyAsync(vacancy);
+            var response = await _vacancyCore.UpdateVacancyAsync(vacancy);
+            return StatusCode((int)response.StatusHttp, response);
         }
 
         // DELETE api/<VacanciesController>/5
         [HttpDelete("{id}")]
-        public async Task<bool> Delete(int id)
+        public async Task<ActionResult<bool>> Delete(int id)
         {
-            return await _vacancyCore.DeleteVacancyAsync(id);
+            var response = await _vacancyCore.DeleteVacancyAsync(id);
+            return StatusCode((int)response.StatusHttp, response);
         }
     }
 }

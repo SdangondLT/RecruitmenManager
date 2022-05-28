@@ -34,3 +34,503 @@ FROM [Client] AS [c]
 2022-05-27 17:27:28.937 -05:00 [INF] Executed action RecruitmentManager.Services.Controllers.ClientController.Get (RecruitmentManager.Services) in 1737.5457ms
 2022-05-27 17:27:28.938 -05:00 [INF] Executed endpoint 'RecruitmentManager.Services.Controllers.ClientController.Get (RecruitmentManager.Services)'
 2022-05-27 17:27:28.942 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/api/Client - - - 200 - application/json;+charset=utf-8 1828.2060ms
+2022-05-28 12:44:00.264 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-28 12:44:00.327 -05:00 [INF] Hosting environment: Development
+2022-05-28 12:44:00.329 -05:00 [INF] Content root path: C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\Quiz Recruitment\RecruitmentManager.Services
+2022-05-28 12:44:00.351 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/index.html - -
+2022-05-28 12:44:01.028 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/index.html - - - 200 - text/html;charset=utf-8 678.5849ms
+2022-05-28 12:44:01.487 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/_framework/aspnetcore-browser-refresh.js - -
+2022-05-28 12:44:01.498 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/_framework/aspnetcore-browser-refresh.js - - - 200 12024 application/javascript;+charset=utf-8 9.6118ms
+2022-05-28 12:44:01.544 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/_vs/browserLink - -
+2022-05-28 12:44:01.677 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 132.6778ms
+2022-05-28 12:44:02.314 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - -
+2022-05-28 12:44:02.509 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 193.9951ms
+2022-05-28 12:44:32.814 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/api/Client - -
+2022-05-28 12:44:32.855 -05:00 [INF] Executing endpoint 'RecruitmentManager.Services.Controllers.ClientController.Get (RecruitmentManager.Services)'
+2022-05-28 12:44:32.886 -05:00 [INF] Route matched with {action = "Get", controller = "Client"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[RecruitmentManager.Entities.Entities.Client]]] Get() on controller RecruitmentManager.Services.Controllers.ClientController (RecruitmentManager.Services).
+2022-05-28 12:44:33.631 -05:00 [INF] Entity Framework Core 5.0.16 initialized 'SqlServerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-28 12:44:34.316 -05:00 [INF] Executed DbCommand (32ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[IdClient], [c].[Address], [c].[Name], [c].[PhoneNumber]
+FROM [Client] AS [c]
+2022-05-28 12:44:34.394 -05:00 [INF] Executing ObjectResult, writing value of type 'RecruitmentManager.Entities.Utils.ResponseService`1[[System.Collections.Generic.List`1[[RecruitmentManager.Entities.Entities.Client, RecruitmentManager.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-05-28 12:44:34.424 -05:00 [INF] Executed action RecruitmentManager.Services.Controllers.ClientController.Get (RecruitmentManager.Services) in 1530.6781ms
+2022-05-28 12:44:34.427 -05:00 [INF] Executed endpoint 'RecruitmentManager.Services.Controllers.ClientController.Get (RecruitmentManager.Services)'
+2022-05-28 12:44:34.431 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/api/Client - - - 200 - application/json;+charset=utf-8 1617.5780ms
+2022-05-28 12:45:08.095 -05:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Client application/json 63
+2022-05-28 12:45:08.101 -05:00 [INF] Executing endpoint 'RecruitmentManager.Services.Controllers.ClientController.Post (RecruitmentManager.Services)'
+2022-05-28 12:45:08.121 -05:00 [INF] Route matched with {action = "Post", controller = "Client"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[RecruitmentManager.Entities.Entities.Client]] Post(RecruitmentManager.Entities.DTOs.ClientCreateDto) on controller RecruitmentManager.Services.Controllers.ClientController (RecruitmentManager.Services).
+2022-05-28 12:45:08.189 -05:00 [INF] Entity Framework Core 5.0.16 initialized 'SqlServerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-28 12:45:08.323 -05:00 [INF] Executed DbCommand (26ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Client] ([Address], [Name], [PhoneNumber])
+VALUES (@p0, @p1, @p2);
+SELECT [IdClient]
+FROM [Client]
+WHERE @@ROWCOUNT = 1 AND [IdClient] = scope_identity();
+2022-05-28 12:45:08.362 -05:00 [INF] Executing ObjectResult, writing value of type 'RecruitmentManager.Entities.Utils.ResponseService`1[[RecruitmentManager.Entities.Entities.Client, RecruitmentManager.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-05-28 12:45:08.364 -05:00 [INF] Executed action RecruitmentManager.Services.Controllers.ClientController.Post (RecruitmentManager.Services) in 242.3823ms
+2022-05-28 12:45:08.364 -05:00 [INF] Executed endpoint 'RecruitmentManager.Services.Controllers.ClientController.Post (RecruitmentManager.Services)'
+2022-05-28 12:45:08.364 -05:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Client application/json 63 - 201 - application/json;+charset=utf-8 268.6397ms
+2022-05-28 12:46:42.367 -05:00 [INF] Request starting HTTP/2 PUT https://localhost:44379/api/Client application/json 86
+2022-05-28 12:46:42.372 -05:00 [INF] Executing endpoint 'RecruitmentManager.Services.Controllers.ClientController.Put (RecruitmentManager.Services)'
+2022-05-28 12:46:42.377 -05:00 [INF] Route matched with {action = "Put", controller = "Client"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Boolean]] Put(RecruitmentManager.Entities.Entities.Client) on controller RecruitmentManager.Services.Controllers.ClientController (RecruitmentManager.Services).
+2022-05-28 12:46:42.395 -05:00 [INF] Entity Framework Core 5.0.16 initialized 'SqlServerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-28 12:46:42.467 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[IdClient], [c].[Address], [c].[Name], [c].[PhoneNumber]
+FROM [Client] AS [c]
+WHERE [c].[IdClient] = @__p_0
+2022-05-28 12:46:42.557 -05:00 [ERR] Service: UpdateClientAsync, Message: The instance of entity type 'Client' cannot be tracked because another instance with the same key value for {'IdClient'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values., InnerMessage: 
+System.InvalidOperationException: The instance of entity type 'Client' cannot be tracked because another instance with the same key value for {'IdClient'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at RecruitmentManager.Core.Core.V1.ClientCore.UpdateClientAsync(Client clientToUpdate) in C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\Quiz Recruitment\RecruitmentManager.Core\Core\V1\ClientCore.cs:line 70
+2022-05-28 12:46:42.620 -05:00 [INF] Executing ObjectResult, writing value of type 'RecruitmentManager.Entities.Utils.ResponseService`1[[System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-05-28 12:46:42.622 -05:00 [INF] Executed action RecruitmentManager.Services.Controllers.ClientController.Put (RecruitmentManager.Services) in 244.3768ms
+2022-05-28 12:46:42.622 -05:00 [INF] Executed endpoint 'RecruitmentManager.Services.Controllers.ClientController.Put (RecruitmentManager.Services)'
+2022-05-28 12:46:42.624 -05:00 [INF] Request finished HTTP/2 PUT https://localhost:44379/api/Client application/json 86 - 500 - application/json;+charset=utf-8 258.2783ms
+2022-05-28 12:50:59.757 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-28 12:50:59.773 -05:00 [INF] Hosting environment: Development
+2022-05-28 12:50:59.774 -05:00 [INF] Content root path: C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\Quiz Recruitment\RecruitmentManager.Services
+2022-05-28 12:50:59.779 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/index.html - -
+2022-05-28 12:50:59.995 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/index.html - - - 200 - text/html;charset=utf-8 215.7664ms
+2022-05-28 12:51:00.059 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/_framework/aspnetcore-browser-refresh.js - -
+2022-05-28 12:51:00.069 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/_framework/aspnetcore-browser-refresh.js - - - 200 12024 application/javascript;+charset=utf-8 7.0708ms
+2022-05-28 12:51:00.269 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/_vs/browserLink - -
+2022-05-28 12:51:00.323 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 53.8090ms
+2022-05-28 12:51:00.667 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - -
+2022-05-28 12:51:00.829 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 162.6085ms
+2022-05-28 12:51:20.604 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/api/Client - -
+2022-05-28 12:51:20.663 -05:00 [INF] Executing endpoint 'RecruitmentManager.Services.Controllers.ClientController.Get (RecruitmentManager.Services)'
+2022-05-28 12:51:20.698 -05:00 [INF] Route matched with {action = "Get", controller = "Client"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[RecruitmentManager.Entities.Entities.Client]]] Get() on controller RecruitmentManager.Services.Controllers.ClientController (RecruitmentManager.Services).
+2022-05-28 12:51:21.378 -05:00 [INF] Entity Framework Core 5.0.16 initialized 'SqlServerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-28 12:51:22.037 -05:00 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[IdClient], [c].[Address], [c].[Name], [c].[PhoneNumber]
+FROM [Client] AS [c]
+2022-05-28 12:51:22.128 -05:00 [INF] Executing ObjectResult, writing value of type 'RecruitmentManager.Entities.Utils.ResponseService`1[[System.Collections.Generic.List`1[[RecruitmentManager.Entities.Entities.Client, RecruitmentManager.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-05-28 12:51:22.156 -05:00 [INF] Executed action RecruitmentManager.Services.Controllers.ClientController.Get (RecruitmentManager.Services) in 1450.4422ms
+2022-05-28 12:51:22.157 -05:00 [INF] Executed endpoint 'RecruitmentManager.Services.Controllers.ClientController.Get (RecruitmentManager.Services)'
+2022-05-28 12:51:22.160 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/api/Client - - - 200 - application/json;+charset=utf-8 1556.1830ms
+2022-05-28 12:51:59.484 -05:00 [INF] Request starting HTTP/2 PUT https://localhost:44379/api/Client application/json 85
+2022-05-28 12:51:59.494 -05:00 [INF] Executing endpoint 'RecruitmentManager.Services.Controllers.ClientController.Put (RecruitmentManager.Services)'
+2022-05-28 12:51:59.512 -05:00 [INF] Route matched with {action = "Put", controller = "Client"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Boolean]] Put(RecruitmentManager.Entities.Entities.Client) on controller RecruitmentManager.Services.Controllers.ClientController (RecruitmentManager.Services).
+2022-05-28 12:51:59.563 -05:00 [INF] Entity Framework Core 5.0.16 initialized 'SqlServerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-28 12:51:59.687 -05:00 [INF] Executed DbCommand (21ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[IdClient], [c].[Address], [c].[Name], [c].[PhoneNumber]
+FROM [Client] AS [c]
+WHERE [c].[IdClient] = @__p_0
+2022-05-28 12:51:59.762 -05:00 [ERR] Service: UpdateClientAsync, Message: The instance of entity type 'Client' cannot be tracked because another instance with the same key value for {'IdClient'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values., InnerMessage: 
+System.InvalidOperationException: The instance of entity type 'Client' cannot be tracked because another instance with the same key value for {'IdClient'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at RecruitmentManager.Core.Core.V1.ClientCore.UpdateClientAsync(Client clientToUpdate) in C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\Quiz Recruitment\RecruitmentManager.Core\Core\V1\ClientCore.cs:line 70
+2022-05-28 12:51:59.791 -05:00 [INF] Executing ObjectResult, writing value of type 'RecruitmentManager.Entities.Utils.ResponseService`1[[System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-05-28 12:51:59.792 -05:00 [INF] Executed action RecruitmentManager.Services.Controllers.ClientController.Put (RecruitmentManager.Services) in 280.1247ms
+2022-05-28 12:51:59.792 -05:00 [INF] Executed endpoint 'RecruitmentManager.Services.Controllers.ClientController.Put (RecruitmentManager.Services)'
+2022-05-28 12:51:59.793 -05:00 [INF] Request finished HTTP/2 PUT https://localhost:44379/api/Client application/json 85 - 500 - application/json;+charset=utf-8 308.9533ms
+2022-05-28 12:57:08.994 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-28 12:57:09.033 -05:00 [INF] Hosting environment: Development
+2022-05-28 12:57:09.036 -05:00 [INF] Content root path: C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\Quiz Recruitment\RecruitmentManager.Services
+2022-05-28 12:57:09.051 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/index.html - -
+2022-05-28 12:57:09.483 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/index.html - - - 200 - text/html;charset=utf-8 435.1056ms
+2022-05-28 12:57:09.562 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/_framework/aspnetcore-browser-refresh.js - -
+2022-05-28 12:57:09.581 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/_framework/aspnetcore-browser-refresh.js - - - 200 12024 application/javascript;+charset=utf-8 14.2950ms
+2022-05-28 12:57:09.879 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/_vs/browserLink - -
+2022-05-28 12:57:10.049 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 169.8007ms
+2022-05-28 12:57:10.678 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - -
+2022-05-28 12:57:10.927 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 245.6255ms
+2022-05-28 12:57:26.791 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/api/Client - -
+2022-05-28 12:57:26.825 -05:00 [INF] Executing endpoint 'RecruitmentManager.Services.Controllers.ClientController.Get (RecruitmentManager.Services)'
+2022-05-28 12:57:26.857 -05:00 [INF] Route matched with {action = "Get", controller = "Client"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[RecruitmentManager.Entities.Entities.Client]]] Get() on controller RecruitmentManager.Services.Controllers.ClientController (RecruitmentManager.Services).
+2022-05-28 12:57:27.513 -05:00 [INF] Entity Framework Core 5.0.16 initialized 'SqlServerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-28 12:57:28.157 -05:00 [INF] Executed DbCommand (38ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[IdClient], [c].[Address], [c].[Name], [c].[PhoneNumber]
+FROM [Client] AS [c]
+2022-05-28 12:57:28.234 -05:00 [INF] Executing ObjectResult, writing value of type 'RecruitmentManager.Entities.Utils.ResponseService`1[[System.Collections.Generic.List`1[[RecruitmentManager.Entities.Entities.Client, RecruitmentManager.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-05-28 12:57:28.258 -05:00 [INF] Executed action RecruitmentManager.Services.Controllers.ClientController.Get (RecruitmentManager.Services) in 1397.4033ms
+2022-05-28 12:57:28.259 -05:00 [INF] Executed endpoint 'RecruitmentManager.Services.Controllers.ClientController.Get (RecruitmentManager.Services)'
+2022-05-28 12:57:28.262 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/api/Client - - - 200 - application/json;+charset=utf-8 1471.1856ms
+2022-05-28 12:57:45.615 -05:00 [INF] Request starting HTTP/2 PUT https://localhost:44379/api/Client application/json 76
+2022-05-28 12:57:45.618 -05:00 [INF] Executing endpoint 'RecruitmentManager.Services.Controllers.ClientController.Put (RecruitmentManager.Services)'
+2022-05-28 12:57:45.633 -05:00 [INF] Route matched with {action = "Put", controller = "Client"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Boolean]] Put(RecruitmentManager.Entities.Entities.Client) on controller RecruitmentManager.Services.Controllers.ClientController (RecruitmentManager.Services).
+2022-05-28 12:57:45.696 -05:00 [INF] Entity Framework Core 5.0.16 initialized 'SqlServerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-28 12:57:45.817 -05:00 [INF] Executed DbCommand (24ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Client] SET [Address] = @p0, [Name] = @p1, [PhoneNumber] = @p2
+WHERE [IdClient] = @p3;
+SELECT @@ROWCOUNT;
+2022-05-28 12:57:45.837 -05:00 [INF] Executing ObjectResult, writing value of type 'RecruitmentManager.Entities.Utils.ResponseService`1[[System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-05-28 12:57:45.838 -05:00 [INF] Executed action RecruitmentManager.Services.Controllers.ClientController.Put (RecruitmentManager.Services) in 204.7222ms
+2022-05-28 12:57:45.838 -05:00 [INF] Executed endpoint 'RecruitmentManager.Services.Controllers.ClientController.Put (RecruitmentManager.Services)'
+2022-05-28 12:57:45.839 -05:00 [INF] Request finished HTTP/2 PUT https://localhost:44379/api/Client application/json 76 - 200 - application/json;+charset=utf-8 223.9462ms
+2022-05-28 12:58:19.158 -05:00 [INF] Request starting HTTP/2 PUT https://localhost:44379/api/Client application/json 86
+2022-05-28 12:58:19.159 -05:00 [INF] Executing endpoint 'RecruitmentManager.Services.Controllers.ClientController.Put (RecruitmentManager.Services)'
+2022-05-28 12:58:19.162 -05:00 [INF] Route matched with {action = "Put", controller = "Client"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Boolean]] Put(RecruitmentManager.Entities.Entities.Client) on controller RecruitmentManager.Services.Controllers.ClientController (RecruitmentManager.Services).
+2022-05-28 12:58:19.172 -05:00 [INF] Entity Framework Core 5.0.16 initialized 'SqlServerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-28 12:58:19.182 -05:00 [INF] Executed DbCommand (7ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Client] SET [Address] = @p0, [Name] = @p1, [PhoneNumber] = @p2
+WHERE [IdClient] = @p3;
+SELECT @@ROWCOUNT;
+2022-05-28 12:58:19.188 -05:00 [INF] Executing ObjectResult, writing value of type 'RecruitmentManager.Entities.Utils.ResponseService`1[[System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-05-28 12:58:19.189 -05:00 [INF] Executed action RecruitmentManager.Services.Controllers.ClientController.Put (RecruitmentManager.Services) in 27.702ms
+2022-05-28 12:58:19.190 -05:00 [INF] Executed endpoint 'RecruitmentManager.Services.Controllers.ClientController.Put (RecruitmentManager.Services)'
+2022-05-28 12:58:19.191 -05:00 [INF] Request finished HTTP/2 PUT https://localhost:44379/api/Client application/json 86 - 200 - application/json;+charset=utf-8 32.4963ms
+2022-05-28 13:00:36.401 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-28 13:00:36.426 -05:00 [INF] Hosting environment: Development
+2022-05-28 13:00:36.428 -05:00 [INF] Content root path: C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\Quiz Recruitment\RecruitmentManager.Services
+2022-05-28 13:00:36.434 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/_framework/aspnetcore-browser-refresh.js - -
+2022-05-28 13:00:36.434 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/index.html - -
+2022-05-28 13:00:36.454 -05:00 [ERR] Connection ID "18158513703463419940", Request ID "80000025-0001-fc00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+System.OperationCanceledException: The operation was canceled.
+   at System.Threading.CancellationToken.ThrowOperationCanceledException()
+   at System.Threading.CancellationToken.ThrowIfCancellationRequested()
+   at Microsoft.AspNetCore.Server.IIS.Core.HttpResponseStream.ValidateState(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.IIS.Core.HttpResponseStream.WriteAsync(ReadOnlyMemory`1 source, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.IIS.Core.WrappingStream.WriteAsync(ReadOnlyMemory`1 source, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserScriptMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapWhenMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+2022-05-28 13:00:36.498 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/_framework/aspnetcore-browser-refresh.js - - - 0 12024 application/javascript;+charset=utf-8 66.2844ms
+2022-05-28 13:00:36.779 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/index.html - - - 200 - text/html;charset=utf-8 349.8924ms
+2022-05-28 13:00:36.824 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/_framework/aspnetcore-browser-refresh.js - -
+2022-05-28 13:00:36.831 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/_framework/aspnetcore-browser-refresh.js - - - 200 12024 application/javascript;+charset=utf-8 7.4604ms
+2022-05-28 13:00:37.107 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/_vs/browserLink - -
+2022-05-28 13:00:37.175 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 68.5321ms
+2022-05-28 13:00:37.606 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - -
+2022-05-28 13:00:37.784 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 178.0534ms
+2022-05-28 13:00:47.599 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/api/Client - -
+2022-05-28 13:00:47.656 -05:00 [INF] Executing endpoint 'RecruitmentManager.Services.Controllers.ClientController.Get (RecruitmentManager.Services)'
+2022-05-28 13:00:47.708 -05:00 [INF] Route matched with {action = "Get", controller = "Client"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[RecruitmentManager.Entities.Entities.Client]]] Get() on controller RecruitmentManager.Services.Controllers.ClientController (RecruitmentManager.Services).
+2022-05-28 13:00:48.351 -05:00 [INF] Entity Framework Core 5.0.16 initialized 'SqlServerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-28 13:00:49.002 -05:00 [INF] Executed DbCommand (49ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[IdClient], [c].[Address], [c].[Name], [c].[PhoneNumber]
+FROM [Client] AS [c]
+2022-05-28 13:00:49.109 -05:00 [INF] Executing ObjectResult, writing value of type 'RecruitmentManager.Entities.Utils.ResponseService`1[[System.Collections.Generic.List`1[[RecruitmentManager.Entities.Entities.Client, RecruitmentManager.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-05-28 13:00:49.137 -05:00 [INF] Executed action RecruitmentManager.Services.Controllers.ClientController.Get (RecruitmentManager.Services) in 1422.9588ms
+2022-05-28 13:00:49.139 -05:00 [INF] Executed endpoint 'RecruitmentManager.Services.Controllers.ClientController.Get (RecruitmentManager.Services)'
+2022-05-28 13:00:49.144 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/api/Client - - - 200 - application/json;+charset=utf-8 1544.7793ms
+2022-05-28 13:01:13.663 -05:00 [INF] Request starting HTTP/2 DELETE https://localhost:44379/api/Client application/json 72
+2022-05-28 13:01:13.672 -05:00 [INF] Executing endpoint 'RecruitmentManager.Services.Controllers.ClientController.Delete (RecruitmentManager.Services)'
+2022-05-28 13:01:13.689 -05:00 [INF] Route matched with {action = "Delete", controller = "Client"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Boolean]] Delete(RecruitmentManager.Entities.Entities.Client) on controller RecruitmentManager.Services.Controllers.ClientController (RecruitmentManager.Services).
+2022-05-28 13:01:13.763 -05:00 [INF] Entity Framework Core 5.0.16 initialized 'SqlServerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-28 13:01:13.829 -05:00 [INF] Executed action RecruitmentManager.Services.Controllers.ClientController.Delete (RecruitmentManager.Services) in 139.84ms
+2022-05-28 13:01:13.829 -05:00 [INF] Executed endpoint 'RecruitmentManager.Services.Controllers.ClientController.Delete (RecruitmentManager.Services)'
+2022-05-28 13:01:13.832 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: The key value at position 0 of the call to 'DbSet<Client>.Find' was of type 'Client', which does not match the property type of 'int'.
+   at Microsoft.EntityFrameworkCore.Internal.EntityFinder`1.FindTracked(Object[] keyValues, IReadOnlyList`1& keyProperties)
+   at Microsoft.EntityFrameworkCore.Internal.EntityFinder`1.Find(Object[] keyValues)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Find(Object[] keyValues)
+   at RecruitmentManager.Core.Core.V1.ClientCore.DeleteClientAsync(Client clientToDelete) in C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\Quiz Recruitment\RecruitmentManager.Core\Core\V1\ClientCore.cs:line 81
+   at RecruitmentManager.Services.Controllers.ClientController.Delete(Client client) in C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\Quiz Recruitment\RecruitmentManager.Services\Controllers\ClientsController.cs:line 61
+   at lambda_method49(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-05-28 13:01:13.853 -05:00 [INF] Request finished HTTP/2 DELETE https://localhost:44379/api/Client application/json 72 - 500 - text/plain 190.0825ms
+2022-05-28 13:03:05.873 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-28 13:03:05.918 -05:00 [INF] Hosting environment: Development
+2022-05-28 13:03:05.920 -05:00 [INF] Content root path: C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\Quiz Recruitment\RecruitmentManager.Services
+2022-05-28 13:03:05.926 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/index.html - -
+2022-05-28 13:03:06.239 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/index.html - - - 200 - text/html;charset=utf-8 316.5956ms
+2022-05-28 13:03:06.288 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/_framework/aspnetcore-browser-refresh.js - -
+2022-05-28 13:03:06.303 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/_framework/aspnetcore-browser-refresh.js - - - 200 12024 application/javascript;+charset=utf-8 11.8269ms
+2022-05-28 13:03:06.601 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/_vs/browserLink - -
+2022-05-28 13:03:06.681 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 80.7365ms
+2022-05-28 13:03:07.104 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - -
+2022-05-28 13:03:07.264 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 159.9164ms
+2022-05-28 13:03:20.656 -05:00 [INF] Request starting HTTP/2 DELETE https://localhost:44379/api/Client application/json 72
+2022-05-28 13:03:20.700 -05:00 [INF] Executing endpoint 'RecruitmentManager.Services.Controllers.ClientController.Delete (RecruitmentManager.Services)'
+2022-05-28 13:03:20.737 -05:00 [INF] Route matched with {action = "Delete", controller = "Client"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Boolean]] Delete(RecruitmentManager.Entities.Entities.Client) on controller RecruitmentManager.Services.Controllers.ClientController (RecruitmentManager.Services).
+2022-05-28 13:03:21.391 -05:00 [INF] Entity Framework Core 5.0.16 initialized 'SqlServerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-28 13:03:22.073 -05:00 [INF] Executed DbCommand (35ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[IdClient], [c].[Address], [c].[Name], [c].[PhoneNumber]
+FROM [Client] AS [c]
+WHERE [c].[IdClient] = @__p_0
+2022-05-28 13:03:22.262 -05:00 [INF] Executed DbCommand (16ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Client]
+WHERE [IdClient] = @p0;
+SELECT @@ROWCOUNT;
+2022-05-28 13:03:22.306 -05:00 [INF] Executing ObjectResult, writing value of type 'RecruitmentManager.Entities.Utils.ResponseService`1[[System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-05-28 13:03:22.334 -05:00 [INF] Executed action RecruitmentManager.Services.Controllers.ClientController.Delete (RecruitmentManager.Services) in 1588.8412ms
+2022-05-28 13:03:22.335 -05:00 [INF] Executed endpoint 'RecruitmentManager.Services.Controllers.ClientController.Delete (RecruitmentManager.Services)'
+2022-05-28 13:03:22.338 -05:00 [INF] Request finished HTTP/2 DELETE https://localhost:44379/api/Client application/json 72 - 200 - application/json;+charset=utf-8 1682.5744ms
+2022-05-28 13:04:29.168 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-28 13:04:29.193 -05:00 [INF] Hosting environment: Development
+2022-05-28 13:04:29.195 -05:00 [INF] Content root path: C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\Quiz Recruitment\RecruitmentManager.Services
+2022-05-28 13:04:29.203 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/index.html - -
+2022-05-28 13:04:29.484 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/index.html - - - 200 - text/html;charset=utf-8 286.6930ms
+2022-05-28 13:04:29.536 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/_framework/aspnetcore-browser-refresh.js - -
+2022-05-28 13:04:29.545 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/_framework/aspnetcore-browser-refresh.js - - - 200 12024 application/javascript;+charset=utf-8 6.8375ms
+2022-05-28 13:04:29.875 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/_vs/browserLink - -
+2022-05-28 13:04:29.958 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 82.3811ms
+2022-05-28 13:04:30.353 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - -
+2022-05-28 13:04:30.539 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 186.4743ms
+2022-05-28 13:05:53.047 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/api/Vacancies - -
+2022-05-28 13:05:53.098 -05:00 [INF] Executing endpoint 'RecruitmentManager.Services.Controllers.VacanciesController.Get (RecruitmentManager.Services)'
+2022-05-28 13:05:53.123 -05:00 [INF] Route matched with {action = "Get", controller = "Vacancies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[RecruitmentManager.Entities.Entities.Vacancy]]] Get() on controller RecruitmentManager.Services.Controllers.VacanciesController (RecruitmentManager.Services).
+2022-05-28 13:05:53.686 -05:00 [INF] Entity Framework Core 5.0.16 initialized 'SqlServerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-28 13:05:54.308 -05:00 [INF] Executed DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [v].[IdVacancy], [v].[AvailableVacancies], [v].[Candidates], [v].[Description], [v].[IdClient], [v].[IdRecruiter], [v].[IsOpen], [v].[Seniority], [v].[Skills], [v].[WinnerCandidates]
+FROM [Vacancy] AS [v]
+2022-05-28 13:05:54.402 -05:00 [INF] Executing ObjectResult, writing value of type 'RecruitmentManager.Entities.Utils.ResponseService`1[[System.Collections.Generic.List`1[[RecruitmentManager.Entities.Entities.Vacancy, RecruitmentManager.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-05-28 13:05:54.425 -05:00 [INF] Executed action RecruitmentManager.Services.Controllers.VacanciesController.Get (RecruitmentManager.Services) in 1296.3627ms
+2022-05-28 13:05:54.426 -05:00 [INF] Executed endpoint 'RecruitmentManager.Services.Controllers.VacanciesController.Get (RecruitmentManager.Services)'
+2022-05-28 13:05:54.430 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/api/Vacancies - - - 200 - application/json;+charset=utf-8 1382.3524ms
+2022-05-28 13:07:28.323 -05:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Vacancies application/json 183
+2022-05-28 13:07:28.330 -05:00 [INF] Executing endpoint 'RecruitmentManager.Services.Controllers.VacanciesController.Post (RecruitmentManager.Services)'
+2022-05-28 13:07:28.344 -05:00 [INF] Route matched with {action = "Post", controller = "Vacancies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[RecruitmentManager.Entities.Entities.Vacancy]] Post(RecruitmentManager.Entities.DTOs.VacancyCreateDto) on controller RecruitmentManager.Services.Controllers.VacanciesController (RecruitmentManager.Services).
+2022-05-28 13:07:28.459 -05:00 [INF] Executed action RecruitmentManager.Services.Controllers.VacanciesController.Post (RecruitmentManager.Services) in 114.5371ms
+2022-05-28 13:07:28.460 -05:00 [INF] Executed endpoint 'RecruitmentManager.Services.Controllers.VacanciesController.Post (RecruitmentManager.Services)'
+2022-05-28 13:07:28.463 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+VacancyCreateDto -> Vacancy
+RecruitmentManager.Entities.DTOs.VacancyCreateDto -> RecruitmentManager.Entities.Entities.Vacancy
+   at lambda_method84(Closure , Object , Vacancy , ResolutionContext )
+   at RecruitmentManager.Core.Core.V1.VacancyCore.CreateVacancyAsync(VacancyCreateDto entity) in C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\Quiz Recruitment\RecruitmentManager.Core\Core\V1\VacancyCore.cs:line 46
+   at RecruitmentManager.Services.Controllers.VacanciesController.Post(VacancyCreateDto vacancy) in C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\Quiz Recruitment\RecruitmentManager.Services\Controllers\VacanciesController.cs:line 38
+   at lambda_method79(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-05-28 13:07:28.512 -05:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Vacancies application/json 183 - 500 - text/plain 189.3796ms
+2022-05-28 13:14:18.272 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-28 13:14:18.293 -05:00 [INF] Hosting environment: Development
+2022-05-28 13:14:18.294 -05:00 [INF] Content root path: C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\Quiz Recruitment\RecruitmentManager.Services
+2022-05-28 13:14:18.303 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/index.html - -
+2022-05-28 13:14:18.555 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/index.html - - - 200 - text/html;charset=utf-8 250.4412ms
+2022-05-28 13:14:18.596 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/_framework/aspnetcore-browser-refresh.js - -
+2022-05-28 13:14:18.605 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/_framework/aspnetcore-browser-refresh.js - - - 200 12024 application/javascript;+charset=utf-8 6.0473ms
+2022-05-28 13:14:18.794 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/_vs/browserLink - -
+2022-05-28 13:14:18.850 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 56.1200ms
+2022-05-28 13:14:19.203 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - -
+2022-05-28 13:14:19.345 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 142.7892ms
+2022-05-28 13:16:09.290 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/favicon-32x32.png - -
+2022-05-28 13:16:09.319 -05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2022-05-28 13:16:09.319 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/favicon-32x32.png - - - 200 628 image/png 29.1578ms
+2022-05-28 13:17:15.424 -05:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Vacancies application/json 183
+2022-05-28 13:17:15.472 -05:00 [INF] Executing endpoint 'RecruitmentManager.Services.Controllers.VacanciesController.Post (RecruitmentManager.Services)'
+2022-05-28 13:17:15.518 -05:00 [INF] Route matched with {action = "Post", controller = "Vacancies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[RecruitmentManager.Entities.Entities.Vacancy]] Post(RecruitmentManager.Entities.DTOs.VacancyCreateDto) on controller RecruitmentManager.Services.Controllers.VacanciesController (RecruitmentManager.Services).
+2022-05-28 13:17:15.780 -05:00 [INF] Executed action RecruitmentManager.Services.Controllers.VacanciesController.Post (RecruitmentManager.Services) in 255.6412ms
+2022-05-28 13:17:15.782 -05:00 [INF] Executed endpoint 'RecruitmentManager.Services.Controllers.VacanciesController.Post (RecruitmentManager.Services)'
+2022-05-28 13:17:15.785 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+VacancyCreateDto -> Vacancy
+RecruitmentManager.Entities.DTOs.VacancyCreateDto -> RecruitmentManager.Entities.Entities.Vacancy
+   at lambda_method20(Closure , Object , Vacancy , ResolutionContext )
+   at RecruitmentManager.Core.Core.V1.VacancyCore.CreateVacancyAsync(VacancyCreateDto entity) in C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\Quiz Recruitment\RecruitmentManager.Core\Core\V1\VacancyCore.cs:line 46
+   at RecruitmentManager.Services.Controllers.VacanciesController.Post(VacancyCreateDto vacancy) in C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\Quiz Recruitment\RecruitmentManager.Services\Controllers\VacanciesController.cs:line 38
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-05-28 13:17:15.854 -05:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Vacancies application/json 183 - 500 - text/plain 430.1542ms
+2022-05-28 13:22:49.912 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-28 13:22:49.930 -05:00 [INF] Hosting environment: Development
+2022-05-28 13:22:49.931 -05:00 [INF] Content root path: C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\Quiz Recruitment\RecruitmentManager.Services
+2022-05-28 13:22:49.940 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/index.html - -
+2022-05-28 13:22:50.177 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/index.html - - - 200 - text/html;charset=utf-8 239.3699ms
+2022-05-28 13:22:50.214 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/_framework/aspnetcore-browser-refresh.js - -
+2022-05-28 13:22:50.224 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/_framework/aspnetcore-browser-refresh.js - - - 200 12024 application/javascript;+charset=utf-8 7.2806ms
+2022-05-28 13:22:50.329 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/_vs/browserLink - -
+2022-05-28 13:22:50.379 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 49.5372ms
+2022-05-28 13:22:50.640 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - -
+2022-05-28 13:22:50.765 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 125.9028ms
+2022-05-28 13:23:03.160 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/api/Vacancies - -
+2022-05-28 13:23:03.199 -05:00 [INF] Executing endpoint 'RecruitmentManager.Services.Controllers.VacanciesController.Get (RecruitmentManager.Services)'
+2022-05-28 13:23:03.241 -05:00 [INF] Route matched with {action = "Get", controller = "Vacancies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[RecruitmentManager.Entities.Entities.Vacancy]]] Get() on controller RecruitmentManager.Services.Controllers.VacanciesController (RecruitmentManager.Services).
+2022-05-28 13:23:03.911 -05:00 [INF] Entity Framework Core 5.0.16 initialized 'SqlServerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-28 13:23:04.539 -05:00 [INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [v].[IdVacancy], [v].[AvailableVacancies], [v].[Candidates], [v].[Description], [v].[IdClient], [v].[IdRecruiter], [v].[IsOpen], [v].[Seniority], [v].[Skills], [v].[WinnerCandidates]
+FROM [Vacancy] AS [v]
+2022-05-28 13:23:04.630 -05:00 [INF] Executing ObjectResult, writing value of type 'RecruitmentManager.Entities.Utils.ResponseService`1[[System.Collections.Generic.List`1[[RecruitmentManager.Entities.Entities.Vacancy, RecruitmentManager.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-05-28 13:23:04.653 -05:00 [INF] Executed action RecruitmentManager.Services.Controllers.VacanciesController.Get (RecruitmentManager.Services) in 1407.7575ms
+2022-05-28 13:23:04.654 -05:00 [INF] Executed endpoint 'RecruitmentManager.Services.Controllers.VacanciesController.Get (RecruitmentManager.Services)'
+2022-05-28 13:23:04.657 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/api/Vacancies - - - 200 - application/json;+charset=utf-8 1498.5484ms
+2022-05-28 13:24:41.538 -05:00 [INF] Request starting HTTP/2 PUT https://localhost:44379/api/Vacancies application/json 246
+2022-05-28 13:24:41.546 -05:00 [INF] Executing endpoint 'RecruitmentManager.Services.Controllers.VacanciesController.Put (RecruitmentManager.Services)'
+2022-05-28 13:24:41.571 -05:00 [INF] Route matched with {action = "Put", controller = "Vacancies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Boolean]] Put(RecruitmentManager.Entities.Entities.Vacancy) on controller RecruitmentManager.Services.Controllers.VacanciesController (RecruitmentManager.Services).
+2022-05-28 13:24:41.647 -05:00 [INF] Entity Framework Core 5.0.16 initialized 'SqlServerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-28 13:24:41.771 -05:00 [INF] Executed DbCommand (25ms) [Parameters=[@p9='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Vacancy] SET [AvailableVacancies] = @p0, [Candidates] = @p1, [Description] = @p2, [IdClient] = @p3, [IdRecruiter] = @p4, [IsOpen] = @p5, [Seniority] = @p6, [Skills] = @p7, [WinnerCandidates] = @p8
+WHERE [IdVacancy] = @p9;
+SELECT @@ROWCOUNT;
+2022-05-28 13:24:41.800 -05:00 [INF] Executing ObjectResult, writing value of type 'RecruitmentManager.Entities.Utils.ResponseService`1[[System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-05-28 13:24:41.802 -05:00 [INF] Executed action RecruitmentManager.Services.Controllers.VacanciesController.Put (RecruitmentManager.Services) in 230.7143ms
+2022-05-28 13:24:41.802 -05:00 [INF] Executed endpoint 'RecruitmentManager.Services.Controllers.VacanciesController.Put (RecruitmentManager.Services)'
+2022-05-28 13:24:41.802 -05:00 [INF] Request finished HTTP/2 PUT https://localhost:44379/api/Vacancies application/json 246 - 200 - application/json;+charset=utf-8 264.1483ms
+2022-05-28 13:25:22.777 -05:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Vacancies application/json 183
+2022-05-28 13:25:22.777 -05:00 [INF] Executing endpoint 'RecruitmentManager.Services.Controllers.VacanciesController.Post (RecruitmentManager.Services)'
+2022-05-28 13:25:22.788 -05:00 [INF] Route matched with {action = "Post", controller = "Vacancies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[RecruitmentManager.Entities.Entities.Vacancy]] Post(RecruitmentManager.Entities.DTOs.VacancyCreateDto) on controller RecruitmentManager.Services.Controllers.VacanciesController (RecruitmentManager.Services).
+2022-05-28 13:25:22.864 -05:00 [INF] Executed action RecruitmentManager.Services.Controllers.VacanciesController.Post (RecruitmentManager.Services) in 76.0869ms
+2022-05-28 13:25:22.865 -05:00 [INF] Executed endpoint 'RecruitmentManager.Services.Controllers.VacanciesController.Post (RecruitmentManager.Services)'
+2022-05-28 13:25:22.868 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+VacancyCreateDto -> Vacancy
+RecruitmentManager.Entities.DTOs.VacancyCreateDto -> RecruitmentManager.Entities.Entities.Vacancy
+   at lambda_method115(Closure , Object , Vacancy , ResolutionContext )
+   at RecruitmentManager.Core.Core.V1.VacancyCore.CreateVacancyAsync(VacancyCreateDto entity) in C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\Quiz Recruitment\RecruitmentManager.Core\Core\V1\VacancyCore.cs:line 46
+   at RecruitmentManager.Services.Controllers.VacanciesController.Post(VacancyCreateDto vacancy) in C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\Quiz Recruitment\RecruitmentManager.Services\Controllers\VacanciesController.cs:line 38
+   at lambda_method110(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-05-28 13:25:22.921 -05:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Vacancies application/json 183 - 500 - text/plain 144.3194ms
+2022-05-28 13:27:20.558 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-28 13:27:20.573 -05:00 [INF] Hosting environment: Development
+2022-05-28 13:27:20.574 -05:00 [INF] Content root path: C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\Quiz Recruitment\RecruitmentManager.Services
+2022-05-28 13:27:20.580 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/index.html - -
+2022-05-28 13:27:20.826 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/index.html - - - 200 - text/html;charset=utf-8 245.0881ms
+2022-05-28 13:27:20.866 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/_framework/aspnetcore-browser-refresh.js - -
+2022-05-28 13:27:20.880 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/_framework/aspnetcore-browser-refresh.js - - - 200 12024 application/javascript;+charset=utf-8 11.7036ms
+2022-05-28 13:27:21.035 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/_vs/browserLink - -
+2022-05-28 13:27:21.122 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 85.6848ms
+2022-05-28 13:27:21.352 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - -
+2022-05-28 13:27:21.493 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 141.2161ms
+2022-05-28 13:27:31.158 -05:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Vacancies application/json 183
+2022-05-28 13:27:31.193 -05:00 [INF] Executing endpoint 'RecruitmentManager.Services.Controllers.VacanciesController.Post (RecruitmentManager.Services)'
+2022-05-28 13:27:31.242 -05:00 [INF] Route matched with {action = "Post", controller = "Vacancies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[RecruitmentManager.Entities.Entities.Vacancy]] Post(RecruitmentManager.Entities.DTOs.VacancyCreateDto) on controller RecruitmentManager.Services.Controllers.VacanciesController (RecruitmentManager.Services).
+2022-05-28 13:27:31.542 -05:00 [INF] Executed action RecruitmentManager.Services.Controllers.VacanciesController.Post (RecruitmentManager.Services) in 293.2893ms
+2022-05-28 13:27:31.544 -05:00 [INF] Executed endpoint 'RecruitmentManager.Services.Controllers.VacanciesController.Post (RecruitmentManager.Services)'
+2022-05-28 13:27:31.547 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+VacancyCreateDto -> Vacancy
+RecruitmentManager.Entities.DTOs.VacancyCreateDto -> RecruitmentManager.Entities.Entities.Vacancy
+   at lambda_method20(Closure , Object , Vacancy , ResolutionContext )
+   at RecruitmentManager.Core.Core.V1.VacancyCore.CreateVacancyAsync(VacancyCreateDto entity) in C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\Quiz Recruitment\RecruitmentManager.Core\Core\V1\VacancyCore.cs:line 46
+   at RecruitmentManager.Services.Controllers.VacanciesController.Post(VacancyCreateDto vacancy) in C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\Quiz Recruitment\RecruitmentManager.Services\Controllers\VacanciesController.cs:line 38
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-05-28 13:27:31.608 -05:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Vacancies application/json 183 - 500 - text/plain 450.0438ms
+2022-05-28 13:30:57.072 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-28 13:30:57.089 -05:00 [INF] Hosting environment: Development
+2022-05-28 13:30:57.091 -05:00 [INF] Content root path: C:\Users\SEBASTIAN ROMERO\LeanTech\Backend Training\Projects\Quiz Recruitment\RecruitmentManager.Services
+2022-05-28 13:30:57.097 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/index.html - -
+2022-05-28 13:30:57.333 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/index.html - - - 200 - text/html;charset=utf-8 235.9990ms
+2022-05-28 13:30:57.367 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/_framework/aspnetcore-browser-refresh.js - -
+2022-05-28 13:30:57.379 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/_framework/aspnetcore-browser-refresh.js - - - 200 12024 application/javascript;+charset=utf-8 10.0028ms
+2022-05-28 13:30:57.496 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/_vs/browserLink - -
+2022-05-28 13:30:57.540 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 43.6020ms
+2022-05-28 13:30:57.733 -05:00 [INF] Request starting HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - -
+2022-05-28 13:30:57.863 -05:00 [INF] Request finished HTTP/2 GET https://localhost:44379/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 131.4934ms
+2022-05-28 13:31:08.306 -05:00 [INF] Request starting HTTP/2 POST https://localhost:44379/api/Vacancies application/json 183
+2022-05-28 13:31:08.340 -05:00 [INF] Executing endpoint 'RecruitmentManager.Services.Controllers.VacanciesController.Post (RecruitmentManager.Services)'
+2022-05-28 13:31:08.384 -05:00 [INF] Route matched with {action = "Post", controller = "Vacancies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[RecruitmentManager.Entities.Entities.Vacancy]] Post(RecruitmentManager.Entities.DTOs.VacancyCreateDto) on controller RecruitmentManager.Services.Controllers.VacanciesController (RecruitmentManager.Services).
+2022-05-28 13:31:09.034 -05:00 [INF] Entity Framework Core 5.0.16 initialized 'SqlServerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-28 13:31:09.679 -05:00 [INF] Executed DbCommand (49ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Vacancy] ([AvailableVacancies], [Candidates], [Description], [IdClient], [IdRecruiter], [IsOpen], [Seniority], [Skills], [WinnerCandidates])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+SELECT [IdVacancy]
+FROM [Vacancy]
+WHERE @@ROWCOUNT = 1 AND [IdVacancy] = scope_identity();
+2022-05-28 13:31:09.754 -05:00 [INF] Executing ObjectResult, writing value of type 'RecruitmentManager.Entities.Utils.ResponseService`1[[RecruitmentManager.Entities.Entities.Vacancy, RecruitmentManager.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-05-28 13:31:09.786 -05:00 [INF] Executed action RecruitmentManager.Services.Controllers.VacanciesController.Post (RecruitmentManager.Services) in 1395.7886ms
+2022-05-28 13:31:09.786 -05:00 [INF] Executed endpoint 'RecruitmentManager.Services.Controllers.VacanciesController.Post (RecruitmentManager.Services)'
+2022-05-28 13:31:09.792 -05:00 [INF] Request finished HTTP/2 POST https://localhost:44379/api/Vacancies application/json 183 - 201 - application/json;+charset=utf-8 1486.4543ms
+2022-05-28 13:31:50.890 -05:00 [INF] Request starting HTTP/2 DELETE https://localhost:44379/api/Vacancies/7 - -
+2022-05-28 13:31:50.898 -05:00 [INF] Executing endpoint 'RecruitmentManager.Services.Controllers.VacanciesController.Delete (RecruitmentManager.Services)'
+2022-05-28 13:31:50.918 -05:00 [INF] Route matched with {action = "Delete", controller = "Vacancies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Boolean]] Delete(Int32) on controller RecruitmentManager.Services.Controllers.VacanciesController (RecruitmentManager.Services).
+2022-05-28 13:31:50.950 -05:00 [INF] Entity Framework Core 5.0.16 initialized 'SqlServerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-05-28 13:31:51.153 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [v].[IdVacancy], [v].[AvailableVacancies], [v].[Candidates], [v].[Description], [v].[IdClient], [v].[IdRecruiter], [v].[IsOpen], [v].[Seniority], [v].[Skills], [v].[WinnerCandidates]
+FROM [Vacancy] AS [v]
+WHERE [v].[IdVacancy] = @__p_0
+2022-05-28 13:31:51.172 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Vacancy]
+WHERE [IdVacancy] = @p0;
+SELECT @@ROWCOUNT;
+2022-05-28 13:31:51.181 -05:00 [INF] Executing ObjectResult, writing value of type 'RecruitmentManager.Entities.Utils.ResponseService`1[[System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-05-28 13:31:51.182 -05:00 [INF] Executed action RecruitmentManager.Services.Controllers.VacanciesController.Delete (RecruitmentManager.Services) in 264.0002ms
+2022-05-28 13:31:51.183 -05:00 [INF] Executed endpoint 'RecruitmentManager.Services.Controllers.VacanciesController.Delete (RecruitmentManager.Services)'
+2022-05-28 13:31:51.183 -05:00 [INF] Request finished HTTP/2 DELETE https://localhost:44379/api/Vacancies/7 - - - 200 - application/json;+charset=utf-8 293.2295ms
