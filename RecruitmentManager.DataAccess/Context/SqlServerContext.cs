@@ -5,8 +5,6 @@ namespace RecruitmentManager.DataAccess.Context
 {
     public class SqlServerContext : DbContext
     {
-        private readonly string _connectionString = string.Empty;
-
         public DbSet<Client> Client { get; set; }
         public DbSet<Recruiter> Recruiter { get; set; } //Silena,Mariana
         public DbSet<HardSkill> HardSkill { get; set; }//Dayhana,Paulina
@@ -26,7 +24,7 @@ namespace RecruitmentManager.DataAccess.Context
             modelBuilder.Entity<Client>().Property(c => c.IdClient).UseIdentityColumn().Metadata.SetBeforeSaveBehavior(Microsoft.EntityFrameworkCore.Metadata.PropertySaveBehavior.Ignore);
             //modelBuilder.Entity<Client>().ToTable("Clients");
             
-                modelBuilder.Entity<Recruiter>().HasKey(c => new { c.IdRecruiter });
+            modelBuilder.Entity<Recruiter>().HasKey(c => new { c.IdRecruiter });
             modelBuilder.Entity<Recruiter>().Property(c => c.IdRecruiter).UseIdentityColumn().Metadata.SetBeforeSaveBehavior(Microsoft.EntityFrameworkCore.Metadata.PropertySaveBehavior.Ignore);
 
             modelBuilder.Entity<HardSkill>().HasKey(s => new { s.IdHardSkill });

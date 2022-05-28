@@ -10,6 +10,9 @@ namespace RecruitmentManager.Core.Core.Mapping
         {
             CreateMap<ClientCreateDto, Client>();
             CreateMap<Client, ClientCreateDto>();
+
+            CreateMap<VacancyCreateDto, Vacancy>();
+            CreateMap<Vacancy, VacancyCreateDto>();
         }
     }
 }

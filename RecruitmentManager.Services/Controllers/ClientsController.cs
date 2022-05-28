@@ -48,16 +48,18 @@ namespace RecruitmentManager.Services.Controllers
 
         // PUT api/<ClientController>/5
         [HttpPut]
-        public async Task<bool> Put([FromBody] Client client)
+        public async Task<ActionResult<bool>> Put([FromBody] Client client)
         {
-            return await _clientCore.UpdateClientAsync(client);
+            var response = await _clientCore.UpdateClientAsync(client);
+            return StatusCode((int)response.StatusHttp, response);
         }
 
         // DELETE api/<ClientController>/5
         [HttpDelete]
-        public async Task<bool> Delete(Client client)
+        public async Task<ActionResult<bool>> Delete(Client client)
         {
-            return await _clientCore.DeleteClientAsync(client);
+            var response = await _clientCore.DeleteClientAsync(client);
+            return StatusCode((int)response.StatusHttp, response);
         }
     }
 }

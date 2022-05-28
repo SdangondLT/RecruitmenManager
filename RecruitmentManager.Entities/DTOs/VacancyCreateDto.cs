@@ -1,6 +1,4 @@
-﻿using RecruitmentManager.Entities.Entities;
-using System.Collections.Generic;
-
+﻿
 namespace RecruitmentManager.Entities.DTOs
 {
     public class VacancyCreateDto

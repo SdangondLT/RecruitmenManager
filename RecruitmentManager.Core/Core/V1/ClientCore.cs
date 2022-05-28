@@ -60,29 +60,36 @@ namespace RecruitmentManager.Core.Core.V1
             }
         }
 
-        public async Task<bool> UpdateClientAsync(Client clientToUpdated)
+        public async Task<ResponseService<bool>> UpdateClientAsync(Client clientToUpdate)
         {
-            Client client = _context.Client.Find(clientToUpdated.IdClient);
-            client.Name = clientToUpdated.Name;
-            client.Address = clientToUpdated.Address;
-            client.PhoneNumber = clientToUpdated.PhoneNumber;
+            Client client = _mapper.Map<Client>(clientToUpdate);
 
-            _context.Client.Update(client);
-
-            int recordsAffeted = await _context.SaveChangesAsync();
-
-            return (recordsAffeted == 1);
+            try
+            {
+                _context.Client.Update(client);
+                await _context.SaveChangesAsync();
+                return new ResponseService<bool>(false, "Succefully Updated Client", HttpStatusCode.OK, true);
+            }
+            catch (Exception ex)
+            {
+                return _errorHandler.Error(ex, "UpdateClientAsync", false);
+            }
         }
 
-        public async Task<bool> DeleteClientAsync(Client clientToDelete)
+        public async Task<ResponseService<bool>> DeleteClientAsync(Client clientToDelete)
         {
             Client client = _context.Client.Find(clientToDelete.IdClient);
-           
-            _context.Client.Remove(client);
 
-            int recordsAffeted = await _context.SaveChangesAsync();
-
-            return (recordsAffeted == 1);
+            try
+            {
+                _context.Remove(client);
+                await _context.SaveChangesAsync();
+                return new ResponseService<bool>(false, "Succefully Deleted Client", HttpStatusCode.OK, true);
+            }
+            catch (Exception ex)
+            {
+                return _errorHandler.Error(ex, "DeleteClientAsync", false);
+            }
         }
     }
 }
