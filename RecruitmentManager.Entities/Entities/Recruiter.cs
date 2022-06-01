@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace RecruitmentManager.Entities.Entities
 {
-    public class Recruiter
+    public class Recruiter : Person
     {
         public int IdRecruiter { get; set; }
-        public string Name { get; set; }
-        public string PhoneNumber { get; set; }
+        public string Seniority { get; set; }
+        public string TypeOfTechnology { get; set; }
+        public string SocialSecurityNumber { get; set; }
     }
 }
